@@ -80,6 +80,5 @@
                 <Button x:Name="btnFindLocations" Content="Find Locations"/>
             </Grid>
         </Grid>
-
     </Grid>
 </Page>
