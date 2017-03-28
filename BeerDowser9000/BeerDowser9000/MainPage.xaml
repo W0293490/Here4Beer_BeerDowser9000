@@ -6,8 +6,79 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.TopAppBar>
+        <CommandBar RequestedTheme="Dark">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="btnAbout" Label="About"/>
+                <AppBarButton x:Name="btnExit" Label="Exit"/>
+            </CommandBar.SecondaryCommands>
+            <CommandBar.Content>
+                <Grid>
+                    <TextBlock x:Name="txtBoxCurrentLocation" Text="Current: " TextWrapping="NoWrap" FontSize="24"/>
+                </Grid>
+            </CommandBar.Content>
+        </CommandBar>
+    </Page.TopAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid BorderThickness="0,0,2,0" BorderBrush="Black">
+            <TextBox x:Name="txtBoxFilter" TextWrapping="Wrap" FontSize="20" PlaceholderText="Enter search term..." d:LayoutOverrides="LeftPosition, RightPosition" BorderThickness="2"/>
+        </Grid>
+        <Grid Grid.Row="1" BorderThickness="0,2,2,0" BorderBrush="Black">
+            <ListView x:Name="listViewLocations">
+                <ListView.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ListView.BorderBrush>
+            </ListView>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+            <Grid BorderThickness="0,2,0,0">
+                <Grid.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.BorderBrush>
+                <TextBlock x:Name="txtBlockDetails" TextWrapping="Wrap" Text=""/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ListView x:Name="listViewImages" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.IsHorizontalRailEnabled="True" BorderThickness="0,2,0,0" BorderBrush="Black"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" BorderThickness="2,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" BorderThickness="2">
+                <TextBox x:Name="txtBoxSearchQuery" TextWrapping="Wrap" FontSize="20" PlaceholderText="Enter search query..." BorderThickness="5"/>
+            </Grid>
+            <Grid BorderThickness="2">
+                <ComboBox x:Name="comboBoxSearchTypes" FontSize="20" PlaceholderText="Choose search type..." VerticalAlignment="Stretch" d:LayoutOverrides="HorizontalAlignment, Height, LeftPosition, RightPosition, TopPosition, BottomPosition" HorizontalAlignment="Stretch" BorderThickness="5">
+                    <ComboBoxItem Content="State/Province"/>
+                    <ComboBoxItem Content="City"/>
+                    <ComboBoxItem Content="Location"/>
+                </ComboBox>
+            </Grid>
+            <Grid BorderThickness="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="btnFindLocations" Content="Find Locations"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
