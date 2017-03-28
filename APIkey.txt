@@ -1,0 +1,16 @@
+Main Site: https://beermapping.com
+Jordan's API KEY: 45b31d04baa8c587b9b55036dd35bf44 (Everyone can use)
+
+*** &s=json is used to turn returned data into JSON format ***
+
+//Search for breweries based on city\\
+http://beermapping.com/webservice/loccity/API_KEY/CITY_NAME&s=json
+
+//Search for breweries based on state\\
+http://beermapping.com/webservice/locstate/API_KEY/STATE_NAME&s=json
+
+//Search for breweries based on brewery name\\
+http://beermapping.com/webservice/locquery/API_KEY/BREWERY_NAME&s=json
+
+//Search for brewery images based on brewery ID\\
+http://beermapping.com/webservice/locimage/API_KEY/LOCATION_ID&s=json
