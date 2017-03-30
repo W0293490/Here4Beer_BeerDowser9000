@@ -1,1 +1,1 @@
-C:\Users\NSCC Student\Desktop\C#\FinalProject\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\BeerDowser9000.csproj;x86
+C:\Users\Andrew\Source\Repos\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\BeerDowser9000.csproj;x86

@@ -34,13 +34,13 @@
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="14.0" />
-    <build:Item Name="VisualStudioEdition" Value="Blend for Microsoft Visual Studio Enterprise 2015" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2015" />
     <build:Item Name="OperatingSystem" Version="10.0.14393.0 (rs1_release.160715-1616)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.25431.1" />
-    <build:Item Name="ProjectGUID" Value="{0e163571-9059-44bb-987b-87da42d654a8}" />
+    <build:Item Name="ProjectGUID" Value="{0E163571-9059-44BB-987B-87DA42D654A8}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.25527.1" />
-    <build:Item Name="MakePri.exe" Version="10.0.14393.33 (rs1_release_sec.160727-1952)" />
+    <build:Item Name="MakePri.exe" Version="10.0.14393.795 (rs1_release_sec.170105-1850)" />
   </build:Metadata>
 </Package>

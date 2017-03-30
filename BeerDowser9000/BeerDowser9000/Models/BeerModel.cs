@@ -22,7 +22,7 @@ namespace BeerDowser9000.Models
         public string phone { get; set; }
         public string url { get; set; }
         public string overall { get; set; }
-        public string imagecount { get; set; }
-        List<ImageModel> images { get; set; }
+        public string imagecount { get; set; } // If image count > 0, append to list of images
+        List<ImageModel> images { get; set; } // Hold thumbnail and real url for displaying
     }
 }
