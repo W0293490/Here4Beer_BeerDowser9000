@@ -15,8 +15,10 @@ namespace BeerDowser9000
 
         public string Greeting { get; set; } = "I need a beer!";
         public ObservableCollection<BeerModel> BeerPlaces { get; set; }
-        private BeerModel _selectedNameday;
-        private string _filter;
+        private BeerModel _selectedBeerPlace;
+        private string _filter; 
+        public string LocationFilter { get; set; }
+        public string LocationFilterFurther { get; set; } 
 
 
         private List<BeerModel> _beerPlaces = new List<BeerModel>();
@@ -72,14 +74,15 @@ namespace BeerDowser9000
 
         public MainPageData()
         {
-            BeerPlaces = new ObservableCollection<BeerModel>();
-            LoadData();
+            //BeerPlaces = new ObservableCollection<BeerModel>();
+            //LoadData("City", "Halifax");
         }
 
 
-        private async void LoadData()
+        public async void LoadData(string loc, string filterFurther)
         {
-            _beerPlaces = await Repository.GetAllBeersAsync();
+            //BeerPlaces = new ObservableCollection<BeerModel>();
+            _beerPlaces = await Repository.GetAllBeersAsync(loc, filterFurther);
             PerformFiltering();
         }
 

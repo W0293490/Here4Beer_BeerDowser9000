@@ -37,14 +37,14 @@
     <Page.TopAppBar>
         <CommandBar RequestedTheme="Dark">
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:Name="btnAbout"
+                <AppBarButton x:ConnectionId='1' x:Name="btnAbout"
                               Label="About" />
-                <AppBarButton x:Name="btnExit"
+                <AppBarButton x:ConnectionId='2' x:Name="btnExit"
                               Label="Exit" />
             </CommandBar.SecondaryCommands>
             <CommandBar.Content>
                 <Grid>
-                    <TextBlock x:Name="txtBoxCurrentLocation"
+                    <TextBlock x:ConnectionId='3' x:Name="txtBoxCurrentLocation"
                                Text="Current: "
                                TextWrapping="NoWrap"
                                FontSize="24" />
@@ -64,7 +64,7 @@
         </Grid.RowDefinitions>
         <Grid BorderThickness="0,0,2,0"
               BorderBrush="Black">
-            <TextBox x:Name="txtBoxFilter"
+            <TextBox x:ConnectionId='10' x:Name="txtBoxFilter"
                      TextWrapping="Wrap"
                      FontSize="20"
                      PlaceholderText="Enter search term..."
@@ -75,7 +75,7 @@
         <Grid Grid.Row="1"
               BorderThickness="0,2,2,0"
               BorderBrush="Black">
-            <ListView x:Name="listViewLocations"
+            <ListView x:ConnectionId='9' x:Name="listViewLocations"
                       ItemTemplate="{StaticResource BeerModelTemplate}"
                       ItemsSource="{Binding BeerPlaces}">
                 <ListView.BorderBrush>
@@ -105,12 +105,12 @@
                                       Offset="1" />
                     </LinearGradientBrush>
                 </Grid.BorderBrush>
-                <TextBlock x:Name="txtBlockDetails"
+                <TextBlock x:ConnectionId='8' x:Name="txtBlockDetails"
                            TextWrapping="Wrap"
                            Text="" />
             </Grid>
             <Grid Grid.Row="1">
-                <ListView x:Name="listViewImages"
+                <ListView x:ConnectionId='7' x:Name="listViewImages"
                           ScrollViewer.HorizontalScrollMode="Enabled"
                           ScrollViewer.HorizontalScrollBarVisibility="Visible"
                           ScrollViewer.IsHorizontalRailEnabled="True"
@@ -127,7 +127,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1"
                   BorderThickness="2">
-                <TextBox x:Name="txtBoxSearchQuery"
+                <TextBox x:ConnectionId='6' x:Name="txtBoxSearchQuery"
                          TextWrapping="Wrap"
                          FontSize="20"
                          PlaceholderText="Enter search query..."
@@ -135,7 +135,7 @@
                          DataContext="{Binding LocationFilterFurther, Mode=TwoWay}" />
             </Grid>
             <Grid BorderThickness="2">
-                <ComboBox x:Name="comboBoxSearchTypes"
+                <ComboBox x:ConnectionId='5' x:Name="comboBoxSearchTypes"
                           SelectedValuePath="Content"
                           FontSize="20"
                           PlaceholderText="Choose search type..."
@@ -153,10 +153,11 @@
                   Grid.Column="2"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center">
-                <Button x:Name="btnFindLocations"
+                <Button x:ConnectionId='4' x:Name="btnFindLocations"
                         Content="Find Locations"
-                        Click="btnFindLocations_Click" />
+                                                       />
             </Grid>
         </Grid>
     </Grid>
 </Page>
+

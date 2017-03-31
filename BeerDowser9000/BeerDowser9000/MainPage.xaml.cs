@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BeerDowser9000.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,6 +24,10 @@ namespace BeerDowser9000
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Repository repo = new Repository();
+        MainPageData mpd = new MainPageData();
+        public string LocationFilter;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -30,6 +36,18 @@ namespace BeerDowser9000
         private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void comboBoxSearchTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+
+        }
+
+        private void btnFindLocations_Click(object sender, RoutedEventArgs e)
+        {
+            mpd.BeerPlaces = new ObservableCollection<BeerModel>();
+            mpd.LoadData(comboBoxSearchTypes.SelectedValue.ToString(), txtBoxSearchQuery.Text);
         }
     }
 }

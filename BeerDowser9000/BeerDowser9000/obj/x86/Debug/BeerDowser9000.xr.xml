@@ -2,6 +2,9 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="name" />
+    <RootPropertyPathName Name="Content" />
+    <RootPropertyPathName Name="LocationFilter" />
+    <RootPropertyPathName Name="LocationFilterFurther" />
     <RootPropertyPathName Name="BeerPlaces" />
     <RootPropertyPathName Name="Filter" />
   </Roots.PropertyPathNames>
@@ -78,13 +81,16 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="SelectedValuePath" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
@@ -95,6 +101,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">

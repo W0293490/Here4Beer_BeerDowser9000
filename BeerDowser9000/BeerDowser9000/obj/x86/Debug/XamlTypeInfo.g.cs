@@ -222,6 +222,8 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 userType.Activator = Activate_0_MainPageData;
                 userType.AddMemberName("Greeting");
                 userType.AddMemberName("BeerPlaces");
+                userType.AddMemberName("LocationFilter");
+                userType.AddMemberName("LocationFilterFurther");
                 userType.AddMemberName("Filter");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -470,12 +472,32 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             var that = (global::BeerDowser9000.Models.BeerModel)instance;
             return that.NamesAsString;
         }
-        private object get_18_MainPageData_Filter(object instance)
+        private object get_18_MainPageData_LocationFilter(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.LocationFilter;
+        }
+        private void set_18_MainPageData_LocationFilter(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            that.LocationFilter = (global::System.String)Value;
+        }
+        private object get_19_MainPageData_LocationFilterFurther(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.LocationFilterFurther;
+        }
+        private void set_19_MainPageData_LocationFilterFurther(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            that.LocationFilterFurther = (global::System.String)Value;
+        }
+        private object get_20_MainPageData_Filter(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.Filter;
         }
-        private void set_18_MainPageData_Filter(object instance, object Value)
+        private void set_20_MainPageData_Filter(object instance, object Value)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.Filter = (global::System.String)Value;
@@ -596,11 +618,23 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 xamlMember.Getter = get_17_BeerModel_NamesAsString;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "BeerDowser9000.MainPageData.LocationFilter":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "LocationFilter", "String");
+                xamlMember.Getter = get_18_MainPageData_LocationFilter;
+                xamlMember.Setter = set_18_MainPageData_LocationFilter;
+                break;
+            case "BeerDowser9000.MainPageData.LocationFilterFurther":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "LocationFilterFurther", "String");
+                xamlMember.Getter = get_19_MainPageData_LocationFilterFurther;
+                xamlMember.Setter = set_19_MainPageData_LocationFilterFurther;
+                break;
             case "BeerDowser9000.MainPageData.Filter":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "Filter", "String");
-                xamlMember.Getter = get_18_MainPageData_Filter;
-                xamlMember.Setter = set_18_MainPageData_Filter;
+                xamlMember.Getter = get_20_MainPageData_Filter;
+                xamlMember.Setter = set_20_MainPageData_Filter;
                 break;
             }
             return xamlMember;
