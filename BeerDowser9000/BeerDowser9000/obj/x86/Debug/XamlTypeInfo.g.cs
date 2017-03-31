@@ -132,15 +132,29 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
-            _typeNameTable[0] = "BeerDowser9000.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable = new string[10];
+            _typeNameTable[0] = "BeerDowser9000.MainPageData";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "String";
+            _typeNameTable[3] = "System.Collections.ObjectModel.ObservableCollection`1<BeerDowser9000.Models.BeerModel>";
+            _typeNameTable[4] = "System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.BeerModel>";
+            _typeNameTable[5] = "BeerDowser9000.Models.BeerModel";
+            _typeNameTable[6] = "Int32";
+            _typeNameTable[7] = "BeerDowser9000.MainPage";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[9] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::BeerDowser9000.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable = new global::System.Type[10];
+            _typeTable[0] = typeof(global::BeerDowser9000.MainPageData);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::System.String);
+            _typeTable[3] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.BeerModel>);
+            _typeTable[4] = typeof(global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.BeerModel>);
+            _typeTable[5] = typeof(global::BeerDowser9000.Models.BeerModel);
+            _typeTable[6] = typeof(global::System.Int32);
+            _typeTable[7] = typeof(global::BeerDowser9000.MainPage);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -175,7 +189,23 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::BeerDowser9000.MainPage(); }
+        private object Activate_0_MainPageData() { return new global::BeerDowser9000.MainPageData(); }
+        private object Activate_3_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.BeerModel>(); }
+        private object Activate_4_Collection() { return new global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.BeerModel>(); }
+        private object Activate_5_BeerModel() { return new global::BeerDowser9000.Models.BeerModel(); }
+        private object Activate_7_MainPage() { return new global::BeerDowser9000.MainPage(); }
+        private void VectorAdd_3_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::BeerDowser9000.Models.BeerModel>)instance;
+            var newItem = (global::BeerDowser9000.Models.BeerModel)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_4_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::BeerDowser9000.Models.BeerModel>)instance;
+            var newItem = (global::BeerDowser9000.Models.BeerModel)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -187,18 +217,77 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  BeerDowser9000.MainPage
-                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  BeerDowser9000.MainPageData
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_MainPageData;
+                userType.AddMemberName("Greeting");
+                userType.AddMemberName("BeerPlaces");
+                userType.AddMemberName("Filter");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Object
                 xamlType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  String
+                xamlType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  System.Collections.ObjectModel.ObservableCollection`1<BeerDowser9000.Models.BeerModel>
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.BeerModel>"));
+                userType.CollectionAdd = VectorAdd_3_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.BeerModel>
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_Collection;
+                userType.CollectionAdd = VectorAdd_4_Collection;
+                xamlType = userType;
+                break;
+
+            case 5:   //  BeerDowser9000.Models.BeerModel
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_BeerModel;
+                userType.AddMemberName("id");
+                userType.AddMemberName("name");
+                userType.AddMemberName("status");
+                userType.AddMemberName("reviewlink");
+                userType.AddMemberName("proxylink");
+                userType.AddMemberName("blogmap");
+                userType.AddMemberName("street");
+                userType.AddMemberName("city");
+                userType.AddMemberName("state");
+                userType.AddMemberName("zip");
+                userType.AddMemberName("country");
+                userType.AddMemberName("phone");
+                userType.AddMemberName("url");
+                userType.AddMemberName("overall");
+                userType.AddMemberName("imagecount");
+                userType.AddMemberName("NamesAsString");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Int32
+                xamlType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  BeerDowser9000.MainPage
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -206,11 +295,314 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
         }
 
 
+        private object get_0_MainPageData_Greeting(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.Greeting;
+        }
+        private void set_0_MainPageData_Greeting(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            that.Greeting = (global::System.String)Value;
+        }
+        private object get_1_MainPageData_BeerPlaces(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.BeerPlaces;
+        }
+        private void set_1_MainPageData_BeerPlaces(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            that.BeerPlaces = (global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.BeerModel>)Value;
+        }
+        private object get_2_BeerModel_id(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.id;
+        }
+        private void set_2_BeerModel_id(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.id = (global::System.Int32)Value;
+        }
+        private object get_3_BeerModel_name(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.name;
+        }
+        private void set_3_BeerModel_name(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.name = (global::System.String)Value;
+        }
+        private object get_4_BeerModel_status(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.status;
+        }
+        private void set_4_BeerModel_status(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.status = (global::System.String)Value;
+        }
+        private object get_5_BeerModel_reviewlink(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.reviewlink;
+        }
+        private void set_5_BeerModel_reviewlink(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.reviewlink = (global::System.String)Value;
+        }
+        private object get_6_BeerModel_proxylink(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.proxylink;
+        }
+        private void set_6_BeerModel_proxylink(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.proxylink = (global::System.String)Value;
+        }
+        private object get_7_BeerModel_blogmap(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.blogmap;
+        }
+        private void set_7_BeerModel_blogmap(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.blogmap = (global::System.String)Value;
+        }
+        private object get_8_BeerModel_street(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.street;
+        }
+        private void set_8_BeerModel_street(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.street = (global::System.String)Value;
+        }
+        private object get_9_BeerModel_city(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.city;
+        }
+        private void set_9_BeerModel_city(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.city = (global::System.String)Value;
+        }
+        private object get_10_BeerModel_state(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.state;
+        }
+        private void set_10_BeerModel_state(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.state = (global::System.String)Value;
+        }
+        private object get_11_BeerModel_zip(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.zip;
+        }
+        private void set_11_BeerModel_zip(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.zip = (global::System.String)Value;
+        }
+        private object get_12_BeerModel_country(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.country;
+        }
+        private void set_12_BeerModel_country(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.country = (global::System.String)Value;
+        }
+        private object get_13_BeerModel_phone(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.phone;
+        }
+        private void set_13_BeerModel_phone(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.phone = (global::System.String)Value;
+        }
+        private object get_14_BeerModel_url(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.url;
+        }
+        private void set_14_BeerModel_url(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.url = (global::System.String)Value;
+        }
+        private object get_15_BeerModel_overall(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.overall;
+        }
+        private void set_15_BeerModel_overall(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.overall = (global::System.String)Value;
+        }
+        private object get_16_BeerModel_imagecount(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.imagecount;
+        }
+        private void set_16_BeerModel_imagecount(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            that.imagecount = (global::System.String)Value;
+        }
+        private object get_17_BeerModel_NamesAsString(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.BeerModel)instance;
+            return that.NamesAsString;
+        }
+        private object get_18_MainPageData_Filter(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.Filter;
+        }
+        private void set_18_MainPageData_Filter(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            that.Filter = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "BeerDowser9000.MainPageData.Greeting":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "Greeting", "String");
+                xamlMember.Getter = get_0_MainPageData_Greeting;
+                xamlMember.Setter = set_0_MainPageData_Greeting;
+                break;
+            case "BeerDowser9000.MainPageData.BeerPlaces":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "BeerPlaces", "System.Collections.ObjectModel.ObservableCollection`1<BeerDowser9000.Models.BeerModel>");
+                xamlMember.Getter = get_1_MainPageData_BeerPlaces;
+                xamlMember.Setter = set_1_MainPageData_BeerPlaces;
+                break;
+            case "BeerDowser9000.Models.BeerModel.id":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "id", "Int32");
+                xamlMember.Getter = get_2_BeerModel_id;
+                xamlMember.Setter = set_2_BeerModel_id;
+                break;
+            case "BeerDowser9000.Models.BeerModel.name":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "name", "String");
+                xamlMember.Getter = get_3_BeerModel_name;
+                xamlMember.Setter = set_3_BeerModel_name;
+                break;
+            case "BeerDowser9000.Models.BeerModel.status":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "status", "String");
+                xamlMember.Getter = get_4_BeerModel_status;
+                xamlMember.Setter = set_4_BeerModel_status;
+                break;
+            case "BeerDowser9000.Models.BeerModel.reviewlink":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "reviewlink", "String");
+                xamlMember.Getter = get_5_BeerModel_reviewlink;
+                xamlMember.Setter = set_5_BeerModel_reviewlink;
+                break;
+            case "BeerDowser9000.Models.BeerModel.proxylink":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "proxylink", "String");
+                xamlMember.Getter = get_6_BeerModel_proxylink;
+                xamlMember.Setter = set_6_BeerModel_proxylink;
+                break;
+            case "BeerDowser9000.Models.BeerModel.blogmap":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "blogmap", "String");
+                xamlMember.Getter = get_7_BeerModel_blogmap;
+                xamlMember.Setter = set_7_BeerModel_blogmap;
+                break;
+            case "BeerDowser9000.Models.BeerModel.street":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "street", "String");
+                xamlMember.Getter = get_8_BeerModel_street;
+                xamlMember.Setter = set_8_BeerModel_street;
+                break;
+            case "BeerDowser9000.Models.BeerModel.city":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "city", "String");
+                xamlMember.Getter = get_9_BeerModel_city;
+                xamlMember.Setter = set_9_BeerModel_city;
+                break;
+            case "BeerDowser9000.Models.BeerModel.state":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "state", "String");
+                xamlMember.Getter = get_10_BeerModel_state;
+                xamlMember.Setter = set_10_BeerModel_state;
+                break;
+            case "BeerDowser9000.Models.BeerModel.zip":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "zip", "String");
+                xamlMember.Getter = get_11_BeerModel_zip;
+                xamlMember.Setter = set_11_BeerModel_zip;
+                break;
+            case "BeerDowser9000.Models.BeerModel.country":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "country", "String");
+                xamlMember.Getter = get_12_BeerModel_country;
+                xamlMember.Setter = set_12_BeerModel_country;
+                break;
+            case "BeerDowser9000.Models.BeerModel.phone":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "phone", "String");
+                xamlMember.Getter = get_13_BeerModel_phone;
+                xamlMember.Setter = set_13_BeerModel_phone;
+                break;
+            case "BeerDowser9000.Models.BeerModel.url":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "url", "String");
+                xamlMember.Getter = get_14_BeerModel_url;
+                xamlMember.Setter = set_14_BeerModel_url;
+                break;
+            case "BeerDowser9000.Models.BeerModel.overall":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "overall", "String");
+                xamlMember.Getter = get_15_BeerModel_overall;
+                xamlMember.Setter = set_15_BeerModel_overall;
+                break;
+            case "BeerDowser9000.Models.BeerModel.imagecount":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "imagecount", "String");
+                xamlMember.Getter = get_16_BeerModel_imagecount;
+                xamlMember.Setter = set_16_BeerModel_imagecount;
+                break;
+            case "BeerDowser9000.Models.BeerModel.NamesAsString":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.BeerModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "NamesAsString", "String");
+                xamlMember.Getter = get_17_BeerModel_NamesAsString;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "BeerDowser9000.MainPageData.Filter":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "Filter", "String");
+                xamlMember.Getter = get_18_MainPageData_Filter;
+                xamlMember.Setter = set_18_MainPageData_Filter;
+                break;
+            }
             return xamlMember;
         }
     }

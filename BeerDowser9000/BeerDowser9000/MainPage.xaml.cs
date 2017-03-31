@@ -26,5 +26,10 @@ namespace BeerDowser9000
         {
             this.InitializeComponent();
         }
+
+        private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
