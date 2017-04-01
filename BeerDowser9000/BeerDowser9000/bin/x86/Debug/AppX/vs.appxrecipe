@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-01T18:59:57.313</Modified>
+      <Modified>2017-04-01T19:31:10.376</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.exe">
       <PackagePath>entrypoint\BeerDowser9000.exe</PackagePath>
-      <Modified>2017-04-01T18:59:56.412</Modified>
+      <Modified>2017-04-01T19:31:10.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -504,11 +504,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2017-04-01T18:59:56.957</Modified>
+      <Modified>2017-04-01T19:20:30.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\Core\BeerDowser9000.exe">
       <PackagePath>BeerDowser9000.exe</PackagePath>
-      <Modified>2017-04-01T18:59:57.302</Modified>
+      <Modified>2017-04-01T19:31:10.370</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

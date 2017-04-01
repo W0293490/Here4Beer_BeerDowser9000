@@ -21,6 +21,7 @@ namespace BeerDowser9000
         public string LocationFilterFurther { get; set; } 
 
 
+
         private List<BeerModel> _beerPlaces = new List<BeerModel>();
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -101,9 +102,6 @@ namespace BeerDowser9000
         public MainPageData()
         {
             BeerPlaces = new ObservableCollection<BeerModel>();
-
-
-
 
             LoadData("City", "Halifax");
         }
