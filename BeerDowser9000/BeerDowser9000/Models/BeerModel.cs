@@ -53,8 +53,8 @@ namespace BeerDowser9000.Models
 
         public string Info
         {
-            get { return "Welcome to " + name + ".\n\nThis is a " + status + 
-                    ", located at " + street + ", " + city + ", " + state + 
+            get { return "<h2>Welcome to " + name + ".</h2>\n\nThis " + status + 
+                    " is located at " + street + ", " + city + ", " + state + 
                     ", " + country + ".\n\nPhone: " + phone + "."
                     ; }
         }

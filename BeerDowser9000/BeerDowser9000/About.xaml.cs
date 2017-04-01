@@ -25,6 +25,7 @@ namespace BeerDowser9000
         public About()
         {
             this.InitializeComponent();
+            myAnimation.Begin();
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
