@@ -13,9 +13,9 @@ namespace BeerDowser9000
     public class MainPageData : INotifyPropertyChanged
     {
 
-        public string Greeting { get; set; } = "I need a beer!";
+        public string Greeting { get; set; } = "Are you thirsty?...";
         public ObservableCollection<BeerModel> BeerPlaces { get; set; }
-        private BeerModel _selectedBeerPlace;
+        //private BeerModel _selectedBeerPlace;
         private string _filter; 
         public string LocationFilter { get; set; }
         public string LocationFilterFurther { get; set; } 
@@ -25,25 +25,25 @@ namespace BeerDowser9000
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private BeerModel _selectedBeer;
+        private BeerModel _selectedBeerPlace;
         
 
-        public BeerModel SelectedNameday
+        public BeerModel SelectedBeerPlace
         {
             get
             {
-                return _selectedBeer;
+                return _selectedBeerPlace;
             }
             set
             {
-                _selectedBeer = value;
+                _selectedBeerPlace = value;
                 if (value == null)
                 {
-                    Greeting = "Hello World!";
+                    Greeting = "Are you thirsty?...";
                 }
                 else
                 {
-                    Greeting = "Hello " + value.NamesAsString;
+                    Greeting = value.Info;
                 }
                 PropertyChanged?.Invoke(this,
                     new PropertyChangedEventArgs("Greeting"));
@@ -79,7 +79,7 @@ namespace BeerDowser9000
             }
             var lowerCaseFilter = Filter.ToLowerInvariant().Trim();
             var result = _beerPlaces.Where(
-                d => d.NamesAsString.ToLowerInvariant()
+                d => d.Info.ToLowerInvariant()
                         .Contains(lowerCaseFilter)).ToList();
             var toRemove = BeerPlaces.Except(result).ToList();
             foreach (var x in toRemove)

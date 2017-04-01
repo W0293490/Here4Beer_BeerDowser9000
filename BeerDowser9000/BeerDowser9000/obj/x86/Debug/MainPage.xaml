@@ -7,26 +7,22 @@
       mc:Ignorable="d">
     <Page.Resources>
         <DataTemplate x:Key="BeerModelTemplate">
-            <Grid Height="110"
+            <Grid Height="109"
                   Width="480"
                   Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"
-                        Width="110"
-                        Height="110">
-                    <Image Height="110"
-                           Width="110" />
-                </Border>
                 <StackPanel Grid.Column="1"
-                            Margin="10,0,0,0">
+                            Margin="10,0,192,0"
+                            d:LayoutOverrides="LeftPosition, RightPosition">
                     <TextBlock Text="{Binding name}"
                                Style="{StaticResource TitleTextBlockStyle}" />
-                    <TextBlock Text="Subtitle"
+                    <TextBlock Text="{Binding city}"
                                Style="{StaticResource CaptionTextBlockStyle}"
-                               TextWrapping="NoWrap" />
+                               TextWrapping="NoWrap"
+                               Height="22" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -78,7 +74,8 @@
               BorderBrush="Black">
             <ListView x:ConnectionId='9' x:Name="listViewLocations"
                       ItemTemplate="{StaticResource BeerModelTemplate}"
-                      ItemsSource="{Binding BeerPlaces}">
+                      ItemsSource="{Binding BeerPlaces}"
+                      SelectedItem="{Binding SelectedBeerPlace, Mode=TwoWay}">
                 <ListView.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1"
                                          StartPoint="0.5,0">
@@ -108,7 +105,10 @@
                 </Grid.BorderBrush>
                 <TextBlock x:ConnectionId='8' x:Name="txtBlockDetails"
                            TextWrapping="Wrap"
-                           Text="" />
+                           Text="{Binding Greeting}"
+                           FontFamily="Harlow Solid Italic"
+                           FontSize="20"
+                           Foreground="#FF955616" />
             </Grid>
             <Grid Grid.Row="1">
                 <ListView x:ConnectionId='7' x:Name="listViewImages"

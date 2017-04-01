@@ -49,12 +49,17 @@ namespace BeerDowser9000.Models
         //    this.name = name;
         //}
 
-        public BeerModel()
-        {
+        public BeerModel() {}
 
+        public string Info
+        {
+            get { return "Welcome to " + name + ".\n\nThis is a " + status + 
+                    ", located at " + street + ", " + city + ", " + state + 
+                    ", " + country + ".\n\nPhone: " + phone + "."
+                    ; }
         }
 
-        public string NamesAsString => string.Join(", ", name);
+
 
         //public string NamesAsString => string.Join(", ", name);
     }
