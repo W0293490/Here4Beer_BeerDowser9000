@@ -337,8 +337,8 @@
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\beer2.wav">
       <PackagePath>Assets\beer2.wav</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\here4BeerLogo.png">
+      <PackagePath>Assets\here4BeerLogo.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -366,6 +366,9 @@
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.xr.xml">
       <PackagePath>BeerDowser9000.xr.xml</PackagePath>

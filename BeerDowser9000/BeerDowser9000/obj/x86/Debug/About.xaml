@@ -416,7 +416,44 @@
                     <CompositeTransform ScaleX="-1" />
                 </Ellipse.RenderTransform>
             </Ellipse>
+            <Grid HorizontalAlignment="Left"
+                  Height="375"
+                  Margin="345,85,0,0"
+                  VerticalAlignment="Top"
+                  Width="600">
+                <Grid.Background>
+                    <ImageBrush Stretch="Fill"
+                                ImageSource="Assets/here4BeerLogo.png" />
+                </Grid.Background>
+            </Grid>
+            <TextBlock x:ConnectionId='19' x:Name="textBlock"
+                       HorizontalAlignment="Left"
+                       Margin="375,450,0,0"
+                       TextWrapping="Wrap"
+                       Text="Beer Dowser 9000"
+                       VerticalAlignment="Top"
+                       Height="90"
+                       Width="600"
+                       FontSize="80"
+                       FontFamily="Vivaldi"
+                       Foreground="#FFA06A1C"
+                       FontWeight="Bold" />
+            <TextBlock x:ConnectionId='20' x:Name="textBlock_Copy"
+                       HorizontalAlignment="Left"
+                       Margin="450,550,0,0"
+                       TextWrapping="Wrap"
+                       Text="Version 1.0.0"
+                       VerticalAlignment="Top"
+                       Height="90"
+                       Width="430"
+                       FontSize="80"
+                       FontFamily="Vivaldi"
+                       Foreground="#FFA06A1C"
+                       FontWeight="Bold" />
         </Grid>
     </Grid>
 </Page>
+
+
+ 
 
