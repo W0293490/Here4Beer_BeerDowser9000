@@ -38,7 +38,8 @@
         <CommandBar RequestedTheme="Dark">
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:Name="btnAbout"
-                              Label="About" />
+                              Label="About"
+                              Click="btnAbout_Click"/>
                 <AppBarButton x:Name="btnExit"
                               Label="Exit" />
             </CommandBar.SecondaryCommands>
@@ -131,8 +132,7 @@
                          TextWrapping="Wrap"
                          FontSize="20"
                          PlaceholderText="Enter search query..."
-                         BorderThickness="5"
-                         DataContext="{Binding LocationFilterFurther, Mode=TwoWay}" />
+                         BorderThickness="5" />
             </Grid>
             <Grid BorderThickness="2">
                 <ComboBox x:Name="comboBoxSearchTypes"
@@ -142,8 +142,7 @@
                           VerticalAlignment="Stretch"
                           d:LayoutOverrides="HorizontalAlignment, Height, LeftPosition, RightPosition, TopPosition, BottomPosition"
                           HorizontalAlignment="Stretch"
-                          BorderThickness="5"
-                          DataContext="{Binding LocationFilter, Mode=TwoWay}">
+                          BorderThickness="5">
                     <ComboBoxItem Content="State/Province" />
                     <ComboBoxItem Content="City" />
                     <ComboBoxItem Content="Location" />

@@ -224,7 +224,6 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 userType.AddMemberName("BeerPlaces");
                 userType.AddMemberName("LocationFilter");
                 userType.AddMemberName("LocationFilterFurther");
-                userType.AddMemberName("SelectedNameday");
                 userType.AddMemberName("Filter");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -493,22 +492,12 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.LocationFilterFurther = (global::System.String)Value;
         }
-        private object get_20_MainPageData_SelectedNameday(object instance)
-        {
-            var that = (global::BeerDowser9000.MainPageData)instance;
-            return that.SelectedNameday;
-        }
-        private void set_20_MainPageData_SelectedNameday(object instance, object Value)
-        {
-            var that = (global::BeerDowser9000.MainPageData)instance;
-            that.SelectedNameday = (global::BeerDowser9000.Models.BeerModel)Value;
-        }
-        private object get_21_MainPageData_Filter(object instance)
+        private object get_20_MainPageData_Filter(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.Filter;
         }
-        private void set_21_MainPageData_Filter(object instance, object Value)
+        private void set_20_MainPageData_Filter(object instance, object Value)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.Filter = (global::System.String)Value;
@@ -641,17 +630,11 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 xamlMember.Getter = get_19_MainPageData_LocationFilterFurther;
                 xamlMember.Setter = set_19_MainPageData_LocationFilterFurther;
                 break;
-            case "BeerDowser9000.MainPageData.SelectedNameday":
-                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
-                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "SelectedNameday", "BeerDowser9000.Models.BeerModel");
-                xamlMember.Getter = get_20_MainPageData_SelectedNameday;
-                xamlMember.Setter = set_20_MainPageData_SelectedNameday;
-                break;
             case "BeerDowser9000.MainPageData.Filter":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "Filter", "String");
-                xamlMember.Getter = get_21_MainPageData_Filter;
-                xamlMember.Setter = set_21_MainPageData_Filter;
+                xamlMember.Getter = get_20_MainPageData_Filter;
+                xamlMember.Setter = set_20_MainPageData_Filter;
                 break;
             }
             return xamlMember;

@@ -25,6 +25,32 @@ namespace BeerDowser9000
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private BeerModel _selectedBeer;
+        
+
+        public BeerModel SelectedNameday
+        {
+            get
+            {
+                return _selectedBeer;
+            }
+            set
+            {
+                _selectedBeer = value;
+                if (value == null)
+                {
+                    Greeting = "Hello World!";
+                }
+                else
+                {
+                    Greeting = "Hello " + value.NamesAsString;
+                }
+                PropertyChanged?.Invoke(this,
+                    new PropertyChangedEventArgs("Greeting"));
+                //CheckCommand.FireCanExecuteChanged();
+            }
+        }
+
 
         public string Filter
         {
@@ -74,8 +100,12 @@ namespace BeerDowser9000
 
         public MainPageData()
         {
-            //BeerPlaces = new ObservableCollection<BeerModel>();
-            //LoadData("City", "Halifax");
+            BeerPlaces = new ObservableCollection<BeerModel>();
+
+
+
+
+            LoadData("City", "Halifax");
         }
 
 
