@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="BeerDowser9000.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BeerDowser9000"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar Background="#FFF1AD36">
+            <CommandBar.Content>
+                <Grid />
+            </CommandBar.Content>
+            <AppBarButton x:ConnectionId='1' Icon="Back"
+                          Label="Back"
+                                                    
+                          Background="#FFF1AD36"
+                          Foreground="White" />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <StackPanel VerticalAlignment="Top"
+                Background="#FFF1AD36">
+        <TextBlock x:ConnectionId='2' x:Name="textBlock"
+                   TextWrapping="Wrap"
+                   Height="670"
+                   FontSize="100"
+                   Text="VERSION 1.0.0"
+                   Foreground="White"
+                   HorizontalAlignment="Center" />
+
+    </StackPanel>
+</Page>
+

@@ -68,6 +68,7 @@ namespace BeerDowser9000
         private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
             PlaySound();
+            Frame.Navigate(typeof(About));
 
         }
              
