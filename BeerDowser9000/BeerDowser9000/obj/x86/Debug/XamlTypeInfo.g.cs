@@ -132,7 +132,7 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "BeerDowser9000.About";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -143,9 +143,12 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             _typeNameTable[7] = "System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.BeerModel>";
             _typeNameTable[8] = "BeerDowser9000.Models.BeerModel";
             _typeNameTable[9] = "Int32";
-            _typeNameTable[10] = "BeerDowser9000.MainPage";
+            _typeNameTable[10] = "System.Collections.ObjectModel.ObservableCollection`1<BeerDowser9000.Models.ImageModel>";
+            _typeNameTable[11] = "System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.ImageModel>";
+            _typeNameTable[12] = "BeerDowser9000.Models.ImageModel";
+            _typeNameTable[13] = "BeerDowser9000.MainPage";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::BeerDowser9000.About);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -156,7 +159,10 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             _typeTable[7] = typeof(global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.BeerModel>);
             _typeTable[8] = typeof(global::BeerDowser9000.Models.BeerModel);
             _typeTable[9] = typeof(global::System.Int32);
-            _typeTable[10] = typeof(global::BeerDowser9000.MainPage);
+            _typeTable[10] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.ImageModel>);
+            _typeTable[11] = typeof(global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.ImageModel>);
+            _typeTable[12] = typeof(global::BeerDowser9000.Models.ImageModel);
+            _typeTable[13] = typeof(global::BeerDowser9000.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -196,7 +202,10 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
         private object Activate_6_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.BeerModel>(); }
         private object Activate_7_Collection() { return new global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.BeerModel>(); }
         private object Activate_8_BeerModel() { return new global::BeerDowser9000.Models.BeerModel(); }
-        private object Activate_10_MainPage() { return new global::BeerDowser9000.MainPage(); }
+        private object Activate_10_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.ImageModel>(); }
+        private object Activate_11_Collection() { return new global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.ImageModel>(); }
+        private object Activate_12_ImageModel() { return new global::BeerDowser9000.Models.ImageModel(); }
+        private object Activate_13_MainPage() { return new global::BeerDowser9000.MainPage(); }
         private void VectorAdd_6_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::BeerDowser9000.Models.BeerModel>)instance;
@@ -207,6 +216,18 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
         {
             var collection = (global::System.Collections.Generic.ICollection<global::BeerDowser9000.Models.BeerModel>)instance;
             var newItem = (global::BeerDowser9000.Models.BeerModel)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_10_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::BeerDowser9000.Models.ImageModel>)instance;
+            var newItem = (global::BeerDowser9000.Models.ImageModel)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_11_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::BeerDowser9000.Models.ImageModel>)instance;
+            var newItem = (global::BeerDowser9000.Models.ImageModel)item;
             collection.Add(newItem);
         }
 
@@ -240,9 +261,11 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 userType.Activator = Activate_3_MainPageData;
                 userType.AddMemberName("Greeting");
                 userType.AddMemberName("BeerPlaces");
+                userType.AddMemberName("PlaceImages");
                 userType.AddMemberName("LocationFilter");
                 userType.AddMemberName("LocationFilterFurther");
                 userType.AddMemberName("SelectedBeerPlace");
+                userType.AddMemberName("SelectedImage");
                 userType.AddMemberName("SelectedPlaceId");
                 userType.AddMemberName("Filter");
                 userType.SetIsLocalType();
@@ -298,9 +321,41 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 xamlType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 10:   //  BeerDowser9000.MainPage
+            case 10:   //  System.Collections.ObjectModel.ObservableCollection`1<BeerDowser9000.Models.ImageModel>
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.ImageModel>"));
+                userType.CollectionAdd = VectorAdd_10_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 11:   //  System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.ImageModel>
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_11_Collection;
+                userType.CollectionAdd = VectorAdd_11_Collection;
+                xamlType = userType;
+                break;
+
+            case 12:   //  BeerDowser9000.Models.ImageModel
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_12_ImageModel;
+                userType.AddMemberName("imageid");
+                userType.AddMemberName("directurl");
+                userType.AddMemberName("imageurl");
+                userType.AddMemberName("width");
+                userType.AddMemberName("height");
+                userType.AddMemberName("thumburl");
+                userType.AddMemberName("caption");
+                userType.AddMemberName("credit");
+                userType.AddMemberName("crediturl");
+                userType.AddMemberName("imagedate");
+                userType.AddMemberName("score");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  BeerDowser9000.MainPage
                 userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_MainPage;
+                userType.Activator = Activate_13_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -484,47 +539,172 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             var that = (global::BeerDowser9000.Models.BeerModel)instance;
             return that.Info;
         }
-        private object get_18_MainPageData_LocationFilter(object instance)
+        private object get_18_MainPageData_PlaceImages(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.PlaceImages;
+        }
+        private void set_18_MainPageData_PlaceImages(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            that.PlaceImages = (global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.ImageModel>)Value;
+        }
+        private object get_19_ImageModel_imageid(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.imageid;
+        }
+        private void set_19_ImageModel_imageid(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.imageid = (global::System.String)Value;
+        }
+        private object get_20_ImageModel_directurl(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.directurl;
+        }
+        private void set_20_ImageModel_directurl(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.directurl = (global::System.String)Value;
+        }
+        private object get_21_ImageModel_imageurl(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.imageurl;
+        }
+        private void set_21_ImageModel_imageurl(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.imageurl = (global::System.String)Value;
+        }
+        private object get_22_ImageModel_width(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.width;
+        }
+        private void set_22_ImageModel_width(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.width = (global::System.String)Value;
+        }
+        private object get_23_ImageModel_height(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.height;
+        }
+        private void set_23_ImageModel_height(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.height = (global::System.String)Value;
+        }
+        private object get_24_ImageModel_thumburl(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.thumburl;
+        }
+        private void set_24_ImageModel_thumburl(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.thumburl = (global::System.String)Value;
+        }
+        private object get_25_ImageModel_caption(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.caption;
+        }
+        private void set_25_ImageModel_caption(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.caption = (global::System.String)Value;
+        }
+        private object get_26_ImageModel_credit(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.credit;
+        }
+        private void set_26_ImageModel_credit(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.credit = (global::System.String)Value;
+        }
+        private object get_27_ImageModel_crediturl(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.crediturl;
+        }
+        private void set_27_ImageModel_crediturl(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.crediturl = (global::System.String)Value;
+        }
+        private object get_28_ImageModel_imagedate(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.imagedate;
+        }
+        private void set_28_ImageModel_imagedate(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.imagedate = (global::System.String)Value;
+        }
+        private object get_29_ImageModel_score(object instance)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            return that.score;
+        }
+        private void set_29_ImageModel_score(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.Models.ImageModel)instance;
+            that.score = (global::System.String)Value;
+        }
+        private object get_30_MainPageData_LocationFilter(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.LocationFilter;
         }
-        private void set_18_MainPageData_LocationFilter(object instance, object Value)
+        private void set_30_MainPageData_LocationFilter(object instance, object Value)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.LocationFilter = (global::System.String)Value;
         }
-        private object get_19_MainPageData_LocationFilterFurther(object instance)
+        private object get_31_MainPageData_LocationFilterFurther(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.LocationFilterFurther;
         }
-        private void set_19_MainPageData_LocationFilterFurther(object instance, object Value)
+        private void set_31_MainPageData_LocationFilterFurther(object instance, object Value)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.LocationFilterFurther = (global::System.String)Value;
         }
-        private object get_20_MainPageData_SelectedBeerPlace(object instance)
+        private object get_32_MainPageData_SelectedBeerPlace(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.SelectedBeerPlace;
         }
-        private void set_20_MainPageData_SelectedBeerPlace(object instance, object Value)
+        private void set_32_MainPageData_SelectedBeerPlace(object instance, object Value)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.SelectedBeerPlace = (global::BeerDowser9000.Models.BeerModel)Value;
         }
-        private object get_21_MainPageData_SelectedPlaceId(object instance)
+        private object get_33_MainPageData_SelectedImage(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.SelectedImage;
+        }
+        private object get_34_MainPageData_SelectedPlaceId(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.SelectedPlaceId;
         }
-        private object get_22_MainPageData_Filter(object instance)
+        private object get_35_MainPageData_Filter(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.Filter;
         }
-        private void set_22_MainPageData_Filter(object instance, object Value)
+        private void set_35_MainPageData_Filter(object instance, object Value)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.Filter = (global::System.String)Value;
@@ -645,35 +825,113 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 xamlMember.Getter = get_17_BeerModel_Info;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "BeerDowser9000.MainPageData.PlaceImages":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "PlaceImages", "System.Collections.ObjectModel.ObservableCollection`1<BeerDowser9000.Models.ImageModel>");
+                xamlMember.Getter = get_18_MainPageData_PlaceImages;
+                xamlMember.Setter = set_18_MainPageData_PlaceImages;
+                break;
+            case "BeerDowser9000.Models.ImageModel.imageid":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "imageid", "String");
+                xamlMember.Getter = get_19_ImageModel_imageid;
+                xamlMember.Setter = set_19_ImageModel_imageid;
+                break;
+            case "BeerDowser9000.Models.ImageModel.directurl":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "directurl", "String");
+                xamlMember.Getter = get_20_ImageModel_directurl;
+                xamlMember.Setter = set_20_ImageModel_directurl;
+                break;
+            case "BeerDowser9000.Models.ImageModel.imageurl":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "imageurl", "String");
+                xamlMember.Getter = get_21_ImageModel_imageurl;
+                xamlMember.Setter = set_21_ImageModel_imageurl;
+                break;
+            case "BeerDowser9000.Models.ImageModel.width":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "width", "String");
+                xamlMember.Getter = get_22_ImageModel_width;
+                xamlMember.Setter = set_22_ImageModel_width;
+                break;
+            case "BeerDowser9000.Models.ImageModel.height":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "height", "String");
+                xamlMember.Getter = get_23_ImageModel_height;
+                xamlMember.Setter = set_23_ImageModel_height;
+                break;
+            case "BeerDowser9000.Models.ImageModel.thumburl":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "thumburl", "String");
+                xamlMember.Getter = get_24_ImageModel_thumburl;
+                xamlMember.Setter = set_24_ImageModel_thumburl;
+                break;
+            case "BeerDowser9000.Models.ImageModel.caption":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "caption", "String");
+                xamlMember.Getter = get_25_ImageModel_caption;
+                xamlMember.Setter = set_25_ImageModel_caption;
+                break;
+            case "BeerDowser9000.Models.ImageModel.credit":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "credit", "String");
+                xamlMember.Getter = get_26_ImageModel_credit;
+                xamlMember.Setter = set_26_ImageModel_credit;
+                break;
+            case "BeerDowser9000.Models.ImageModel.crediturl":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "crediturl", "String");
+                xamlMember.Getter = get_27_ImageModel_crediturl;
+                xamlMember.Setter = set_27_ImageModel_crediturl;
+                break;
+            case "BeerDowser9000.Models.ImageModel.imagedate":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "imagedate", "String");
+                xamlMember.Getter = get_28_ImageModel_imagedate;
+                xamlMember.Setter = set_28_ImageModel_imagedate;
+                break;
+            case "BeerDowser9000.Models.ImageModel.score":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.Models.ImageModel");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "score", "String");
+                xamlMember.Getter = get_29_ImageModel_score;
+                xamlMember.Setter = set_29_ImageModel_score;
+                break;
             case "BeerDowser9000.MainPageData.LocationFilter":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "LocationFilter", "String");
-                xamlMember.Getter = get_18_MainPageData_LocationFilter;
-                xamlMember.Setter = set_18_MainPageData_LocationFilter;
+                xamlMember.Getter = get_30_MainPageData_LocationFilter;
+                xamlMember.Setter = set_30_MainPageData_LocationFilter;
                 break;
             case "BeerDowser9000.MainPageData.LocationFilterFurther":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "LocationFilterFurther", "String");
-                xamlMember.Getter = get_19_MainPageData_LocationFilterFurther;
-                xamlMember.Setter = set_19_MainPageData_LocationFilterFurther;
+                xamlMember.Getter = get_31_MainPageData_LocationFilterFurther;
+                xamlMember.Setter = set_31_MainPageData_LocationFilterFurther;
                 break;
             case "BeerDowser9000.MainPageData.SelectedBeerPlace":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "SelectedBeerPlace", "BeerDowser9000.Models.BeerModel");
-                xamlMember.Getter = get_20_MainPageData_SelectedBeerPlace;
-                xamlMember.Setter = set_20_MainPageData_SelectedBeerPlace;
+                xamlMember.Getter = get_32_MainPageData_SelectedBeerPlace;
+                xamlMember.Setter = set_32_MainPageData_SelectedBeerPlace;
+                break;
+            case "BeerDowser9000.MainPageData.SelectedImage":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "SelectedImage", "BeerDowser9000.Models.ImageModel");
+                xamlMember.Getter = get_33_MainPageData_SelectedImage;
+                xamlMember.SetIsReadOnly();
                 break;
             case "BeerDowser9000.MainPageData.SelectedPlaceId":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "SelectedPlaceId", "Int32");
-                xamlMember.Getter = get_21_MainPageData_SelectedPlaceId;
+                xamlMember.Getter = get_34_MainPageData_SelectedPlaceId;
                 xamlMember.SetIsReadOnly();
                 break;
             case "BeerDowser9000.MainPageData.Filter":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "Filter", "String");
-                xamlMember.Getter = get_22_MainPageData_Filter;
-                xamlMember.Setter = set_22_MainPageData_Filter;
+                xamlMember.Getter = get_35_MainPageData_Filter;
+                xamlMember.Setter = set_35_MainPageData_Filter;
                 break;
             }
             return xamlMember;

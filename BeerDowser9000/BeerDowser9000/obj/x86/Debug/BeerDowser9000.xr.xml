@@ -4,6 +4,9 @@
     <RootPropertyPathName Name="city" />
     <RootPropertyPathName Name="name" />
     <RootPropertyPathName Name="Content" />
+    <RootPropertyPathName Name="PlaceImages" />
+    <RootPropertyPathName Name="SelectedImage" />
+    <RootPropertyPathName Name="imageurl" />
     <RootPropertyPathName Name="Greeting" />
     <RootPropertyPathName Name="BeerPlaces" />
     <RootPropertyPathName Name="SelectedBeerPlace" />
@@ -125,6 +128,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -145,6 +149,8 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="BorderThickness" />
@@ -152,9 +158,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedItem" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootMethod Name="GetHorizontalScrollMode" />

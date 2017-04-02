@@ -23,7 +23,7 @@ namespace BeerDowser9000
             }
             var hc = new HttpClient();
             var stream = await hc.GetStreamAsync("http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/" + id + "&s=json");
-            var serializer = new DataContractJsonSerializer(typeof(List<BeerModel>));
+            var serializer = new DataContractJsonSerializer(typeof(List<ImageModel>));
             imagesCache = (List<ImageModel>)serializer.ReadObject(stream);
             return imagesCache;
         }

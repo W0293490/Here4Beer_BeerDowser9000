@@ -33,7 +33,8 @@
         <local:MainPageData />
     </Page.DataContext>
     <Page.TopAppBar>
-        <CommandBar RequestedTheme="Dark">
+        <CommandBar RequestedTheme="Dark"
+                    Background="#FF573C15">
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:ConnectionId='1' x:Name="btnAbout"
                               Label="About"
@@ -69,7 +70,9 @@
                      PlaceholderText="Enter search term..."
                      d:LayoutOverrides="LeftPosition, RightPosition"
                      BorderThickness="2"
-                     Text="{Binding Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                     Text="{Binding Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Background="#FFE8C38E"
+                     Foreground="#FF493313" />
         </Grid>
         <Grid Grid.Row="1"
               BorderThickness="0,2,2,0"
@@ -131,13 +134,17 @@
                           ScrollViewer.IsHorizontalRailEnabled="True"
                           BorderThickness="0,2,0,0"
                           BorderBrush="Black"
-                          Margin="0,-10,0,10"
+                          Margin="0,-10,0,0"
                           Background="#FF573C15"
-                          Foreground="#FF573C15" />
+                          Foreground="#FF573C15"
+                          ItemsSource="{Binding PlaceImages}"
+                          SelectedItem="{Binding SelectedImage, Mode=OneWay}"
+                          DataContext="{Binding SelectedImage.imageurl}" />
             </Grid>
         </Grid>
         <Grid Grid.Column="1"
-              BorderThickness="2,0,0,0">
+              BorderThickness="2,0,0,0"
+              Background="#FF573C15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
@@ -171,7 +178,8 @@
                   VerticalAlignment="Center">
                 <Button x:ConnectionId='4' x:Name="btnFindLocations"
                         Content="Find Locations"
-                                                       />
+                                                      
+                        Background="#FFE0AE65" />
             </Grid>
         </Grid>
     </Grid>

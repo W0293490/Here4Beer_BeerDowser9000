@@ -15,6 +15,7 @@ namespace BeerDowser9000
 
         public string Greeting { get; set; } = "Are you thirsty?...";
         public ObservableCollection<BeerModel> BeerPlaces { get; set; }
+        public ObservableCollection<ImageModel> PlaceImages { get; set; }
         //private BeerModel _selectedBeerPlace;
         private string _filter; 
         public string LocationFilter { get; set; }
@@ -29,7 +30,9 @@ namespace BeerDowser9000
         public event PropertyChangedEventHandler PropertyChanged;
 
         private BeerModel _selectedBeerPlace;
-        
+        private ImageModel _selectedImage;
+
+
 
         public BeerModel SelectedBeerPlace
         {
@@ -47,11 +50,37 @@ namespace BeerDowser9000
                 else
                 {
                     Greeting = value.Info;
+                    PlaceImages = new ObservableCollection<ImageModel>();
+                    LoadImages(_selectedBeerPlace.id);
                 }
                 PropertyChanged?.Invoke(this,
                     new PropertyChangedEventArgs("Greeting"));
                 //CheckCommand.FireCanExecuteChanged();
             }
+        }
+
+
+        public ImageModel SelectedImage
+        {
+            get
+            {
+                return _selectedImage;
+            }
+            //set
+            //{
+            //    _selectedBeerPlace = value;
+            //    if (value == null)
+            //    {
+            //        Greeting = "Are you thirsty?...";
+            //    }
+            //    else
+            //    {
+            //        Greeting = value.Info;
+            //    }
+            //    PropertyChanged?.Invoke(this,
+            //        new PropertyChangedEventArgs("Greeting"));
+            //    //CheckCommand.FireCanExecuteChanged();
+            //}
         }
 
 
@@ -114,8 +143,10 @@ namespace BeerDowser9000
         public MainPageData()
         {
             BeerPlaces = new ObservableCollection<BeerModel>();
+            PlaceImages = new ObservableCollection<ImageModel>();
 
             LoadData("City", "new york");
+            //LoadImages(_selectedBeerPlace.id);
         }
 
 
