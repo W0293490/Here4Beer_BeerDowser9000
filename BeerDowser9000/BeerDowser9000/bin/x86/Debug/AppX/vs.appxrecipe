@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-01T19:31:10.376</Modified>
+      <Modified>2017-04-02T01:16:20.740</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.exe">
       <PackagePath>entrypoint\BeerDowser9000.exe</PackagePath>
-      <Modified>2017-04-01T19:31:10.100</Modified>
+      <Modified>2017-04-02T01:16:19.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -452,6 +452,14 @@
       <PackagePath>Assets\beer2.wav</PackagePath>
       <Modified>2017-04-01T12:09:05.390</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\beer3.jpg">
+      <PackagePath>Assets\beer3.jpg</PackagePath>
+      <Modified>2017-04-01T23:40:15.269</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\beer4.jpg">
+      <PackagePath>Assets\beer4.jpg</PackagePath>
+      <Modified>2017-04-01T23:51:02.045</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\here4BeerLogo.png">
       <PackagePath>Assets\here4BeerLogo.png</PackagePath>
       <Modified>2017-04-01T18:31:12.971</Modified>
@@ -496,7 +504,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.xr.xml">
       <PackagePath>BeerDowser9000.xr.xml</PackagePath>
-      <Modified>2017-04-01T18:49:28.371</Modified>
+      <Modified>2017-04-02T00:08:05.496</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -504,11 +512,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2017-04-01T19:20:30.444</Modified>
+      <Modified>2017-04-02T01:16:20.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\Core\BeerDowser9000.exe">
       <PackagePath>BeerDowser9000.exe</PackagePath>
-      <Modified>2017-04-01T19:31:10.370</Modified>
+      <Modified>2017-04-02T01:16:20.735</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

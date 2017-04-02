@@ -12,20 +12,20 @@ namespace BeerDowser9000
         //MainPageData mpd = new MainPageData();
 
         private static List<BeerModel> allBeersCache;
+ 
+        private static List<ImageModel> imagesCache; 
 
-        private static List<BeerModel> LocationFilterCache; 
-
-        public static async Task<List<BeerModel>> GetAllBeersAsync()
-        {
-            if (allBeersCache != null)
+        public static async Task<List<ImageModel>> GetImagesAsync(int id)
+        { 
+            if (imagesCache != null)
             {
-                return allBeersCache;
+                return imagesCache;
             }
             var hc = new HttpClient();
-            var stream = await hc.GetStreamAsync("http://beermapping.com/webservice/loccity/45b31d04baa8c587b9b55036dd35bf44/halifax&s=json");
+            var stream = await hc.GetStreamAsync("http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/" + id + "&s=json");
             var serializer = new DataContractJsonSerializer(typeof(List<BeerModel>));
-            allBeersCache = (List<BeerModel>)serializer.ReadObject(stream);
-            return allBeersCache;
+            imagesCache = (List<ImageModel>)serializer.ReadObject(stream);
+            return imagesCache;
         }
 
         public static async Task<List<BeerModel>> GetAllBeersAsync(string filter, string filterFurther) 

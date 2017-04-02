@@ -18,11 +18,13 @@ namespace BeerDowser9000
         //private BeerModel _selectedBeerPlace;
         private string _filter; 
         public string LocationFilter { get; set; }
-        public string LocationFilterFurther { get; set; } 
+        public string LocationFilterFurther { get; set; }
 
 
 
         private List<BeerModel> _beerPlaces = new List<BeerModel>();
+
+        private List<ImageModel> _placeImages = new List<ImageModel>();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -51,6 +53,16 @@ namespace BeerDowser9000
                 //CheckCommand.FireCanExecuteChanged();
             }
         }
+
+
+        public int SelectedPlaceId
+        {
+            get
+            {
+                return SelectedBeerPlace.id;
+            }
+        }
+               
 
 
         public string Filter
@@ -103,7 +115,7 @@ namespace BeerDowser9000
         {
             BeerPlaces = new ObservableCollection<BeerModel>();
 
-            LoadData("City", "Halifax");
+            LoadData("City", "new york");
         }
 
 
@@ -112,6 +124,14 @@ namespace BeerDowser9000
             //BeerPlaces = new ObservableCollection<BeerModel>();
             _beerPlaces = await Repository.GetAllBeersAsync(loc, filterFurther);
             PerformFiltering();
+        }
+
+
+        public async void LoadImages(int id) 
+        {
+            //BeerPlaces = new ObservableCollection<BeerModel>();
+            _placeImages = await Repository.GetImagesAsync(id);
+            //PerformFiltering();
         }
 
     }

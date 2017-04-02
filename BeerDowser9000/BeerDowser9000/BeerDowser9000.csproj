@@ -115,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\beer2.wav" />
+    <Content Include="Assets\beer3.jpg" />
+    <Content Include="Assets\beer4.jpg" />
     <Content Include="Assets\here4BeerLogo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

@@ -243,6 +243,7 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 userType.AddMemberName("LocationFilter");
                 userType.AddMemberName("LocationFilterFurther");
                 userType.AddMemberName("SelectedBeerPlace");
+                userType.AddMemberName("SelectedPlaceId");
                 userType.AddMemberName("Filter");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -513,12 +514,17 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.SelectedBeerPlace = (global::BeerDowser9000.Models.BeerModel)Value;
         }
-        private object get_21_MainPageData_Filter(object instance)
+        private object get_21_MainPageData_SelectedPlaceId(object instance)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            return that.SelectedPlaceId;
+        }
+        private object get_22_MainPageData_Filter(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.Filter;
         }
-        private void set_21_MainPageData_Filter(object instance, object Value)
+        private void set_22_MainPageData_Filter(object instance, object Value)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
             that.Filter = (global::System.String)Value;
@@ -657,11 +663,17 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 xamlMember.Getter = get_20_MainPageData_SelectedBeerPlace;
                 xamlMember.Setter = set_20_MainPageData_SelectedBeerPlace;
                 break;
+            case "BeerDowser9000.MainPageData.SelectedPlaceId":
+                userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
+                xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "SelectedPlaceId", "Int32");
+                xamlMember.Getter = get_21_MainPageData_SelectedPlaceId;
+                xamlMember.SetIsReadOnly();
+                break;
             case "BeerDowser9000.MainPageData.Filter":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "Filter", "String");
-                xamlMember.Getter = get_21_MainPageData_Filter;
-                xamlMember.Setter = set_21_MainPageData_Filter;
+                xamlMember.Getter = get_22_MainPageData_Filter;
+                xamlMember.Setter = set_22_MainPageData_Filter;
                 break;
             }
             return xamlMember;
