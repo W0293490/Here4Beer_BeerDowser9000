@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BeerDowser9000.Models
 {
-    class ImageModel
+    public class ImageModel
     {
         public string imageid { get; set; }
         public string directurl { get; set; }

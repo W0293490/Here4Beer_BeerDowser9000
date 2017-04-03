@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BeerDowser9000.Models
 {
-    class BeerModel
+    public class BeerModel
     {
         public int id { get; set; }
         public string name { get; set; }
@@ -23,6 +24,28 @@ namespace BeerDowser9000.Models
         public string url { get; set; }
         public string overall { get; set; }
         public string imagecount { get; set; }
-        List<ImageModel> images { get; set; }
+        //List<ImageModel> images { get; set; }
+
+        //[DataMember]
+        //public IEnumerable<ImageModel> images { get; set; }
+
+        //public BeerModel(string name)
+        //{
+        //    this.name = name;
+        //}
+
+        public BeerModel() {}
+
+        public string Info
+        {
+            get { return "Welcome to " + name + ".\n\nThis " + status + 
+                    " is located at " + street + ", " + city + ", " + state + 
+                    ", " + country + ".\n\nPhone: " + phone + "."
+                    ; }
+        }
+
+
+
+        //public string NamesAsString => string.Join(", ", name);
     }
 }
