@@ -49,7 +49,7 @@ namespace BeerDowser9000
                 }
                 else
                 {
-                    LoadImages(_selectedBeerPlace.id);
+                    //LoadImages(_selectedBeerPlace.id);
                     Greeting = value.Info;
                     PlaceImages = new ObservableCollection<ImageModel>();
                     LoadImages(_selectedBeerPlace.id);
@@ -141,6 +141,14 @@ namespace BeerDowser9000
             }
         }
 
+        private void TestImages()
+        {
+            for(int i = 0; i < _placeImages.Count; i++)
+            {
+                PlaceImages.Insert(i, _placeImages[i]);
+            }
+        }
+
         public MainPageData()
         {
             BeerPlaces = new ObservableCollection<BeerModel>();
@@ -162,6 +170,7 @@ namespace BeerDowser9000
         {
             //BeerPlaces = new ObservableCollection<BeerModel>();
             _placeImages = await Repository.GetImagesAsync(id);
+            TestImages();
             //PerformFiltering();
         }
 
