@@ -17,12 +17,12 @@ namespace BeerDowser9000
 
         public static async Task<List<ImageModel>> GetImagesAsync(int id)
         { 
-            if (imagesCache != null)
-            {
-                return imagesCache;
-            }
+            //string url = "http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/1659&s=json";
+
+            string url = "http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/" + id + "&s=json";
+
             var hc = new HttpClient();
-            var stream = await hc.GetStreamAsync("http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/" + id + "&s=json");
+            var stream = await hc.GetStreamAsync(url);
             var serializer = new DataContractJsonSerializer(typeof(List<ImageModel>));
             imagesCache = (List<ImageModel>)serializer.ReadObject(stream);
             return imagesCache;

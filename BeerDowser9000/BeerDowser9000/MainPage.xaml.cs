@@ -60,7 +60,7 @@ namespace BeerDowser9000
         private void btnFindLocations_Click(object sender, RoutedEventArgs e)
         {
             //mpd.BeerPlaces = new ObservableCollection<BeerModel>();
-            //mpd.LoadData(comboBoxSearchTypes.SelectedValue.ToString(), txtBoxSearchQuery.Text);
+            mpd.LoadData(comboBoxSearchTypes.SelectedValue.ToString(), txtBoxSearchQuery.Text);
             //MainPageData;
             //PlaySound();
         }

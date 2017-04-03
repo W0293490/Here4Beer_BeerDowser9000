@@ -1,0 +1,2 @@
+C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\BeerDowser9000.csproj;x86
+C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Test.csproj;x86

@@ -49,6 +49,7 @@ namespace BeerDowser9000
                 }
                 else
                 {
+                    LoadImages(_selectedBeerPlace.id);
                     Greeting = value.Info;
                     PlaceImages = new ObservableCollection<ImageModel>();
                     LoadImages(_selectedBeerPlace.id);
@@ -146,7 +147,6 @@ namespace BeerDowser9000
             PlaceImages = new ObservableCollection<ImageModel>();
 
             LoadData("City", "new york");
-            //LoadImages(_selectedBeerPlace.id);
         }
 
 
