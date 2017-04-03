@@ -25,9 +25,9 @@ namespace BeerDowser9000
     public sealed partial class MainPage : Page
     {
 
-        Repository repo = new Repository();
         MainPageData mpd = new MainPageData();
-        public string LocationFilter;
+        Repository repo = new Repository();
+        //public string LocationFilter;
 
 
         public MainPage()
@@ -57,10 +57,11 @@ namespace BeerDowser9000
 
         }
 
-        private void btnFindLocations_Click(object sender, RoutedEventArgs e)
+        public void btnFindLocations_Click(object sender, RoutedEventArgs e)
         {
             //mpd.BeerPlaces = new ObservableCollection<BeerModel>();
             mpd.LoadData(comboBoxSearchTypes.SelectedValue.ToString(), txtBoxSearchQuery.Text);
+            DataContext = mpd;
             //MainPageData;
             //PlaySound();
         }

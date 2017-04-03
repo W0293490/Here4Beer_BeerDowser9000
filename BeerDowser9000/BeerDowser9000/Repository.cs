@@ -31,12 +31,12 @@ namespace BeerDowser9000
         public static async Task<List<BeerModel>> GetAllBeersAsync(string filter, string filterFurther) 
         {
             string loc = "";
-            if (allBeersCache != null)
-            {
-                return allBeersCache;
-            }
+            //if (allBeersCache != null)
+            //{
+            //    return allBeersCache;
+            //}
 
-            if (filter == "State / Province")
+            if (filter == "State/Province")
             {
                 loc = "locstate";
             }

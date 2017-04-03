@@ -145,8 +145,8 @@ namespace BeerDowser9000
         {
             BeerPlaces = new ObservableCollection<BeerModel>();
             PlaceImages = new ObservableCollection<ImageModel>();
-
-            LoadData("City", "new york");
+             
+            //LoadData("City", "new york");
         }
 
 
@@ -160,6 +160,10 @@ namespace BeerDowser9000
 
         public async void LoadImages(int id) 
         {
+            for (int i = 0; i < _placeImages.Count; i++)
+            {
+                PlaceImages.Insert(i, _placeImages[i]);
+            }
             //BeerPlaces = new ObservableCollection<BeerModel>();
             _placeImages = await Repository.GetImagesAsync(id);
             //PerformFiltering();
