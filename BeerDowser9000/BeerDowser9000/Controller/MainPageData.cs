@@ -13,27 +13,21 @@ namespace BeerDowser9000
 {
     public class MainPageData : INotifyPropertyChanged
     {
-
         public string Greeting { get; set; } = "Are you thirsty?...";
         public ObservableCollection<BeerModel> BeerPlaces { get; set; }
         public ObservableCollection<ImageModel> PlaceImages { get; set; }
-        //private BeerModel _selectedBeerPlace;
+
         private string _filter; 
         public string LocationFilter { get; set; }
         public string LocationFilterFurther { get; set; }
 
-
-
         private List<BeerModel> _beerPlaces = new List<BeerModel>();
-
         private List<ImageModel> _placeImages = new List<ImageModel>();
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         private BeerModel _selectedBeerPlace;
         private ImageModel _selectedImage;
-
-
 
         public BeerModel SelectedBeerPlace
         {
@@ -51,33 +45,12 @@ namespace BeerDowser9000
                 else
                 {
                     Greeting = value.Info;
-                    LoadImages(_selectedBeerPlace.id);
-                    //PlaceImages = new ObservableCollection<ImageModel>();
-                    //for (int i = 0; i < _placeImages.Count; i++)
-                    //{
-                    //    PlaceImages.Insert(i, _placeImages[i]);
-                    //}
-                    
+                    LoadImages(_selectedBeerPlace.id);             
                 }
                 PropertyChanged?.Invoke(this,
                     new PropertyChangedEventArgs("Greeting"));
-                //CheckCommand.FireCanExecuteChanged();
             }
         }
-
-        //private async void displayNoWifiDialog()
-        //{
-        //    ContentDialog noWifiDialog = new ContentDialog()
-        //    {
-        //        Title = "No wifi connection",
-        //        Content = "Check connection and try again",
-        //        PrimaryButtonText = "Ok"
-        //    };
-
-        //    ContentDialogResult result = await noWifiDialog.ShowAsync();
-        //}
-
-
 
         public ImageModel SelectedImage
         {
@@ -90,8 +63,7 @@ namespace BeerDowser9000
                 _selectedImage = value;
             }
         }
-
-
+        
         public int SelectedPlaceId
         {
             get
@@ -152,41 +124,55 @@ namespace BeerDowser9000
         {
             BeerPlaces = new ObservableCollection<BeerModel>();
             PlaceImages = new ObservableCollection<ImageModel>();
-
-            //for (int i = 0; i < _placeImages.Count; i++)
-            //{
-            //    PlaceImages.Insert(i, _placeImages[i]);
-            //}
-
-            //LoadData("City", "new york");
-            //LoadImages(_selectedBeerPlace.id);
         }
 
 
         public async void LoadData(string loc, string filterFurther)
         {
-            //BeerPlaces = new ObservableCollection<BeerModel>();
-            _beerPlaces = await Repository.GetAllBeersAsync(loc, filterFurther);
-            PerformFiltering();
+           if(filterFurther.Length > 0)
+            {
+                try
+                {
+                    _beerPlaces = await Repository.GetAllBeersAsync(loc, filterFurther);
+                }
+                catch (Exception e)
+                {
+                   Debug.WriteLine("No locations found: " + e);
+                }
+
+                if (_beerPlaces.Count > 0)
+                {
+                    PerformFiltering();
+                }
+            }
+            else
+            {
+                Debug.WriteLine("No locations found");
+            }
         }
 
 
         public async void LoadImages(int id) 
         {
-            //BeerPlaces = new ObservableCollection<BeerModel>();
-            //_placeImages.Clear();
-            if (_placeImages != null)
+            if (_placeImages != null) // If list contains images, clear it (so it doesn't continue to append for next)
             {
                 _placeImages.Clear();
                 PlaceImages.Clear();
-
             }
             _placeImages = await Repository.GetImagesAsync(id);
-            for (int i = 0; i < _placeImages.Count; i++)
+
+            if (Int32.Parse(_selectedBeerPlace.imagecount) == 0) // If no images found
+            {
+                _placeImages.Clear(); // Clear placeholder
+                PlaceImages.Clear();
+                Debug.WriteLine("No images found"); // Insert default placeholder image
+            }
+
+            for (int i = 0; i < _placeImages.Count; i++) // For image count, insert image to image list
             {
                 PlaceImages.Insert(i, _placeImages[i]);
             }
-            //PerformFiltering();
+            NoImage = "";
         }
 
     }
