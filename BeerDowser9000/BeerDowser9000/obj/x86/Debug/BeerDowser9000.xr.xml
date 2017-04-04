@@ -170,8 +170,8 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="SelectedItem" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="BorderBrush" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">

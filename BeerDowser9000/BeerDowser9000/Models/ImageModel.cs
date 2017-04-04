@@ -19,5 +19,9 @@ namespace BeerDowser9000.Models
         public string crediturl { get; set; }
         public string imagedate { get; set; }
         public string score { get; set; }
+
+        public ImageModel() { }
     }
+
+    
 }

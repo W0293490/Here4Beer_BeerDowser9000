@@ -46,10 +46,10 @@ namespace BeerDowser9000
         }
 
 
-        private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        }
+        //}
 
         private void comboBoxSearchTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

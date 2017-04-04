@@ -346,30 +346,6 @@
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\clretwrc.dll">
-      <PackagePath>clretwrc.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\coreclr.dll">
-      <PackagePath>coreclr.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\dbgshim.dll">
-      <PackagePath>dbgshim.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscordaccore.dll">
-      <PackagePath>mscordaccore.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscordbi.dll">
-      <PackagePath>mscordbi.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscorrc.debug.dll">
-      <PackagePath>mscorrc.debug.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscorrc.dll">
-      <PackagePath>mscorrc.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\lib\dotnet\mscorlib.ni.dll">
-      <PackagePath>mscorlib.ni.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\TestPlatform.Universal\14.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Common.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.Common.dll</PackagePath>
     </AppxPackagedFile>

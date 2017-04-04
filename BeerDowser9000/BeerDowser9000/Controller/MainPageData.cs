@@ -49,10 +49,14 @@ namespace BeerDowser9000
                 }
                 else
                 {
-                    LoadImages(_selectedBeerPlace.id);
                     Greeting = value.Info;
-                    PlaceImages = new ObservableCollection<ImageModel>();
                     LoadImages(_selectedBeerPlace.id);
+                    //PlaceImages = new ObservableCollection<ImageModel>();
+                    //for (int i = 0; i < _placeImages.Count; i++)
+                    //{
+                    //    PlaceImages.Insert(i, _placeImages[i]);
+                    //}
+                    
                 }
                 PropertyChanged?.Invoke(this,
                     new PropertyChangedEventArgs("Greeting"));
@@ -145,8 +149,14 @@ namespace BeerDowser9000
         {
             BeerPlaces = new ObservableCollection<BeerModel>();
             PlaceImages = new ObservableCollection<ImageModel>();
-             
+
+            //for (int i = 0; i < _placeImages.Count; i++)
+            //{
+            //    PlaceImages.Insert(i, _placeImages[i]);
+            //}
+
             //LoadData("City", "new york");
+            //LoadImages(_selectedBeerPlace.id);
         }
 
 
@@ -160,12 +170,12 @@ namespace BeerDowser9000
 
         public async void LoadImages(int id) 
         {
+            //BeerPlaces = new ObservableCollection<BeerModel>();
+            _placeImages = await Repository.GetImagesAsync(id);
             for (int i = 0; i < _placeImages.Count; i++)
             {
                 PlaceImages.Insert(i, _placeImages[i]);
             }
-            //BeerPlaces = new ObservableCollection<BeerModel>();
-            _placeImages = await Repository.GetImagesAsync(id);
             //PerformFiltering();
         }
 
