@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-04T04:10:09.682</Modified>
+      <Modified>2017-04-04T12:02:40.242</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.exe">
       <PackagePath>entrypoint\BeerDowser9000.exe</PackagePath>
-      <Modified>2017-04-04T04:10:08.832</Modified>
+      <Modified>2017-04-04T12:02:39.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -504,7 +504,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.xr.xml">
       <PackagePath>BeerDowser9000.xr.xml</PackagePath>
-      <Modified>2017-04-04T04:10:08.401</Modified>
+      <Modified>2017-04-04T12:01:52.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -512,11 +512,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2017-04-04T04:10:09.471</Modified>
+      <Modified>2017-04-04T12:02:40.016</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\Core\BeerDowser9000.exe">
       <PackagePath>BeerDowser9000.exe</PackagePath>
-      <Modified>2017-04-04T04:10:09.677</Modified>
+      <Modified>2017-04-04T12:02:40.237</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -54,15 +54,15 @@
         <CommandBar RequestedTheme="Dark"
                     Background="#FF573C15">
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:Name="btnAbout"
+                <AppBarButton x:ConnectionId='1' x:Name="btnAbout"
                               Label="About"
-                              Click="btnAbout_Click" />
-                <AppBarButton x:Name="btnExit"
+                                                     />
+                <AppBarButton x:ConnectionId='2' x:Name="btnExit"
                               Label="Exit" />
             </CommandBar.SecondaryCommands>
             <CommandBar.Content>
                 <Grid>
-                    <TextBlock x:Name="txtBoxCurrentLocation"
+                    <TextBlock x:ConnectionId='3' x:Name="txtBoxCurrentLocation"
                                Text="{Binding SelectedBeerPlace.name}"
                                TextWrapping="NoWrap"
                                FontSize="24">
@@ -86,7 +86,7 @@
         </Grid.RowDefinitions>
         <Grid BorderThickness="0,0,2,0"
               BorderBrush="Black">
-            <TextBox x:Name="txtBoxFilter"
+            <TextBox x:ConnectionId='11' x:Name="txtBoxFilter"
                      TextWrapping="Wrap"
                      FontSize="20"
                      PlaceholderText="Enter search term..."
@@ -99,7 +99,7 @@
         <Grid Grid.Row="1"
               BorderThickness="0,2,2,0"
               BorderBrush="Black">
-            <ListView x:Name="listViewLocations"
+            <ListView x:ConnectionId='10' x:Name="listViewLocations"
                       ItemTemplate="{StaticResource BeerModelTemplate}"
                       ItemsSource="{Binding BeerPlaces}"
                       SelectedItem="{Binding SelectedBeerPlace, Mode=TwoWay}"
@@ -138,7 +138,7 @@
                                       Offset="1" />
                     </LinearGradientBrush>
                 </Grid.BorderBrush>
-                <TextBlock x:Name="txtBlockDetails"
+                <TextBlock x:ConnectionId='9' x:Name="txtBlockDetails"
                            TextWrapping="Wrap"
                            Text="{Binding Greeting}"
                            FontFamily="Harlow Solid Italic"
@@ -153,12 +153,12 @@
             <Grid Grid.Row="1">
 
 
-                <StackPanel x:Name="stack_panel1"
+                <StackPanel x:ConnectionId='7' x:Name="stack_panel1"
                             Orientation="Vertical"
                             Background="#FFE7E8EC">
 
 
-                    <ListView x:Name="listView"
+                    <ListView x:ConnectionId='8' x:Name="listView"
                               ScrollViewer.HorizontalScrollBarVisibility="Auto"
                               ScrollViewer.HorizontalScrollMode="Enabled"
                               ScrollViewer.IsHorizontalRailEnabled="True"
@@ -194,14 +194,14 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1"
                   BorderThickness="2">
-                <TextBox x:Name="txtBoxSearchQuery"
+                <TextBox x:ConnectionId='6' x:Name="txtBoxSearchQuery"
                          TextWrapping="Wrap"
                          FontSize="20"
                          PlaceholderText="Enter search query..."
                          BorderThickness="5" />
             </Grid>
             <Grid BorderThickness="2">
-                <ComboBox x:Name="comboBoxSearchTypes"
+                <ComboBox x:ConnectionId='5' x:Name="comboBoxSearchTypes"
                           SelectedValuePath="Content"
                           FontSize="20"
                           PlaceholderText="Choose search type..."
@@ -218,11 +218,12 @@
                   Grid.Column="2"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center">
-                <Button x:Name="btnFindLocations"
+                <Button x:ConnectionId='4' x:Name="btnFindLocations"
                         Content="Find Locations"
-                        Click="btnFindLocations_Click"
+                                                      
                         Background="#FFE0AE65" />
             </Grid>
         </Grid>
     </Grid>
 </Page>
+
