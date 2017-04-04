@@ -35,20 +35,16 @@ namespace BeerDowser9000
         public static async Task<List<BeerModel>> GetAllBeersAsync(string filter, string filterFurther) 
         {
             string loc = "";
-            //if (allBeersCache != null)
-            //{
-            //    return allBeersCache;
-            //}
 
-            if (filter == "State/Province")
+            if (filter == "State/Province" && filterFurther.Length > 0)
             {
                 loc = "locstate";
             }
-            else if (filter == "City")
+            else if (filter == "City" && filterFurther.Length > 0)
             {
                 loc = "loccity";
             }
-            else if (filter == "Location")
+            else if (filter == "Location" && filterFurther.Length > 0)
             {
                 loc = "locquery";
             }
