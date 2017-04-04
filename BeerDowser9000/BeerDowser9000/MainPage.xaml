@@ -29,7 +29,7 @@
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="ImageModelTemplate">
-            <Grid Height="110"
+            <Grid Height="220"
                   Width="480"
                   Margin="10">
                 <Grid.ColumnDefinitions>
@@ -37,20 +37,19 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"
-                        Width="110"
-                        Height="110">
-                    <Image Height="110"
-                           Width="110"
+                        Width="220"
+                        Height="220">
+                    <Image Height="220"
+                           Width="220"
                            Stretch="Fill"
                            Source="{Binding imageurl}" />
                 </Border>
                 <StackPanel Grid.Column="1"
                             Margin="10,0,0,0">
                     <TextBlock Text="{Binding caption}"
-                               Style="{StaticResource TitleTextBlockStyle}" />
-                    <TextBlock Text="{Binding credit}"
-                               Style="{StaticResource CaptionTextBlockStyle}"
-                               TextWrapping="NoWrap" />
+                               Style="{StaticResource TitleTextBlockStyle}"
+                               Foreground="#FFF2D460"
+                               FontSize="44" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -71,9 +70,13 @@
             <CommandBar.Content>
                 <Grid>
                     <TextBlock x:Name="txtBoxCurrentLocation"
-                               Text="Current: "
+                               Text="{Binding SelectedBeerPlace.name}"
                                TextWrapping="NoWrap"
-                               FontSize="24" />
+                               FontSize="24">
+                        <TextBlock.DataContext>
+                            <local:MainPageData />
+                        </TextBlock.DataContext>
+                    </TextBlock>
                 </Grid>
             </CommandBar.Content>
         </CommandBar>
@@ -159,7 +162,7 @@
                           ItemTemplate="{StaticResource ImageModelTemplate}"
                           ItemsSource="{Binding PlaceImages}"
                           Background="#FF593E17"
-                          Margin="5,-10,-5,0"
+                          Margin="0,-110,-5,0"
                           Foreground="#FFFFDA79" />
             </Grid>
         </Grid>

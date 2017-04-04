@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="credit" />
     <RootPropertyPathName Name="caption" />
     <RootPropertyPathName Name="imageurl" />
     <RootPropertyPathName Name="city" />
     <RootPropertyPathName Name="name" />
+    <RootPropertyPathName Name="SelectedBeerPlace" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="PlaceImages" />
     <RootPropertyPathName Name="Greeting" />
     <RootPropertyPathName Name="BeerPlaces" />
-    <RootPropertyPathName Name="SelectedBeerPlace" />
     <RootPropertyPathName Name="Filter" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -75,6 +74,10 @@
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="ImageSource" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Fill" />
       <RootProperty Name="HorizontalAlignment" />
@@ -98,10 +101,7 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Style" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="ImageSource" />
+      <RootProperty Name="DataContext" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="ScaleX" />

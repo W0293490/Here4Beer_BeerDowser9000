@@ -171,6 +171,7 @@ namespace BeerDowser9000
         public async void LoadImages(int id) 
         {
             //BeerPlaces = new ObservableCollection<BeerModel>();
+            //_placeImages.Clear();
             _placeImages = await Repository.GetImagesAsync(id);
             for (int i = 0; i < _placeImages.Count; i++)
             {
