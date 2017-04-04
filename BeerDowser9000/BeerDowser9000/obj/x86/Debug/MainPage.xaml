@@ -29,18 +29,19 @@
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="ImageModelTemplate">
-            <Grid Height="220"
-                  Width="222"
+            <Grid Height="243"
+                  Width="262"
                   Margin="10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}"
-                        Width="220"
-                        Height="220">
+                        Height="220"
+                        Grid.ColumnSpan="2"
+                        Margin="0,12,0,11"
+                        d:LayoutOverrides="LeftPosition, RightPosition">
                     <Image Height="220"
-                           Width="220"
                            Stretch="Fill"
                            Source="{Binding imageurl}" />
                 </Border>
@@ -156,18 +157,18 @@
                 <StackPanel x:ConnectionId='7' x:Name="stack_panel1"
                             Orientation="Vertical"
                             Background="#FFE7E8EC">
-
-
                     <ListView x:ConnectionId='8' x:Name="listView"
                               ScrollViewer.HorizontalScrollBarVisibility="Auto"
                               ScrollViewer.HorizontalScrollMode="Enabled"
                               ScrollViewer.IsHorizontalRailEnabled="True"
                               ItemTemplate="{StaticResource ImageModelTemplate}"
                               ItemsSource="{Binding PlaceImages}"
+                              SelectedItem="{Binding SelectedImage, Mode=TwoWay}"
                               Background="#FF593E17"
                               Margin="0,-110,-15,0"
                               Foreground="#FFFFDA79"
-                              Height="260">
+                              Height="260"
+                                                                          >
 
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>

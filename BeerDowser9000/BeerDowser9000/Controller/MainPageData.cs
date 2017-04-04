@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
+using Windows.UI.Xaml.Controls;
 
 namespace BeerDowser9000
 {
@@ -64,6 +65,19 @@ namespace BeerDowser9000
             }
         }
 
+        //private async void displayNoWifiDialog()
+        //{
+        //    ContentDialog noWifiDialog = new ContentDialog()
+        //    {
+        //        Title = "No wifi connection",
+        //        Content = "Check connection and try again",
+        //        PrimaryButtonText = "Ok"
+        //    };
+
+        //    ContentDialogResult result = await noWifiDialog.ShowAsync();
+        //}
+
+
 
         public ImageModel SelectedImage
         {
@@ -71,21 +85,10 @@ namespace BeerDowser9000
             {
                 return _selectedImage;
             }
-            //set
-            //{
-            //    _selectedBeerPlace = value;
-            //    if (value == null)
-            //    {
-            //        Greeting = "Are you thirsty?...";
-            //    }
-            //    else
-            //    {
-            //        Greeting = value.Info;
-            //    }
-            //    PropertyChanged?.Invoke(this,
-            //        new PropertyChangedEventArgs("Greeting"));
-            //    //CheckCommand.FireCanExecuteChanged();
-            //}
+            set
+            {
+                _selectedImage = value;
+            }
         }
 
 

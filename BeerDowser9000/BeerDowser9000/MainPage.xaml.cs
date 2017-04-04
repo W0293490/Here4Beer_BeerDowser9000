@@ -69,9 +69,31 @@ namespace BeerDowser9000
         private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
             PlaySound();
-            Frame.Navigate(typeof(About));
+            Frame.Navigate(typeof(About), mpd);
 
         }
-             
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if(e.Parameter != ""){
+                mpd = (MainPageData)e.Parameter;
+                DataContext = mpd;
+            }
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ImageModel image = (ImageModel)listView.SelectedItem;
+            if(image != null)
+            {
+                Frame.Navigate(typeof(Image), mpd);
+            }
+        }
+
+        //private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        //{
+        //    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        //}
+
     }
 }

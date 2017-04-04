@@ -132,7 +132,7 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
+            _typeNameTable = new string[15];
             _typeNameTable[0] = "BeerDowser9000.About";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -146,9 +146,10 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             _typeNameTable[10] = "System.Collections.ObjectModel.ObservableCollection`1<BeerDowser9000.Models.ImageModel>";
             _typeNameTable[11] = "System.Collections.ObjectModel.Collection`1<BeerDowser9000.Models.ImageModel>";
             _typeNameTable[12] = "BeerDowser9000.Models.ImageModel";
-            _typeNameTable[13] = "BeerDowser9000.MainPage";
+            _typeNameTable[13] = "BeerDowser9000.Image";
+            _typeNameTable[14] = "BeerDowser9000.MainPage";
 
-            _typeTable = new global::System.Type[14];
+            _typeTable = new global::System.Type[15];
             _typeTable[0] = typeof(global::BeerDowser9000.About);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -162,7 +163,8 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             _typeTable[10] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.ImageModel>);
             _typeTable[11] = typeof(global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.ImageModel>);
             _typeTable[12] = typeof(global::BeerDowser9000.Models.ImageModel);
-            _typeTable[13] = typeof(global::BeerDowser9000.MainPage);
+            _typeTable[13] = typeof(global::BeerDowser9000.Image);
+            _typeTable[14] = typeof(global::BeerDowser9000.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -205,7 +207,8 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
         private object Activate_10_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::BeerDowser9000.Models.ImageModel>(); }
         private object Activate_11_Collection() { return new global::System.Collections.ObjectModel.Collection<global::BeerDowser9000.Models.ImageModel>(); }
         private object Activate_12_ImageModel() { return new global::BeerDowser9000.Models.ImageModel(); }
-        private object Activate_13_MainPage() { return new global::BeerDowser9000.MainPage(); }
+        private object Activate_13_Image() { return new global::BeerDowser9000.Image(); }
+        private object Activate_14_MainPage() { return new global::BeerDowser9000.MainPage(); }
         private void VectorAdd_6_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::BeerDowser9000.Models.BeerModel>)instance;
@@ -353,9 +356,16 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 13:   //  BeerDowser9000.MainPage
+            case 13:   //  BeerDowser9000.Image
                 userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_MainPage;
+                userType.Activator = Activate_13_Image;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  BeerDowser9000.MainPage
+                userType = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_14_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -694,6 +704,11 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
             var that = (global::BeerDowser9000.MainPageData)instance;
             return that.SelectedImage;
         }
+        private void set_33_MainPageData_SelectedImage(object instance, object Value)
+        {
+            var that = (global::BeerDowser9000.MainPageData)instance;
+            that.SelectedImage = (global::BeerDowser9000.Models.ImageModel)Value;
+        }
         private object get_34_MainPageData_SelectedPlaceId(object instance)
         {
             var that = (global::BeerDowser9000.MainPageData)instance;
@@ -919,7 +934,7 @@ namespace BeerDowser9000.BeerDowser9000_XamlTypeInfo
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");
                 xamlMember = new global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlMember(this, "SelectedImage", "BeerDowser9000.Models.ImageModel");
                 xamlMember.Getter = get_33_MainPageData_SelectedImage;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Setter = set_33_MainPageData_SelectedImage;
                 break;
             case "BeerDowser9000.MainPageData.SelectedPlaceId":
                 userType = (global::BeerDowser9000.BeerDowser9000_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BeerDowser9000.MainPageData");

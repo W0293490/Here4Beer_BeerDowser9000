@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -20,18 +21,23 @@ namespace BeerDowser9000
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class About : Page
+    public sealed partial class Image : Page
     {
+        string imageURL;
         MainPageData mpd;
-        public About()
+        public Image()
         {
             this.InitializeComponent();
-            myAnimation.Begin();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            mpd = (MainPageData)e.Parameter;
+            mpd = (MainPageData) e.Parameter;
+            if(mpd.SelectedImage != null)
+            {
+                imageURL = mpd.SelectedImage.imageurl;
+                image.Source = new BitmapImage(new Uri(imageURL, UriKind.RelativeOrAbsolute));
+            }
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)

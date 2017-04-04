@@ -579,3 +579,8 @@ C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDows
 C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\obj\x86\Debug\About.xbf
 C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\About.xbf
 C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\obj\x86\Debug\BeerDowser9000.csprojResolveAssemblyReference.cache
+C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\Image.xbf
+C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\obj\x86\Debug\Image.g.i.cs
+C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\obj\x86\Debug\Image.g.cs
+C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\obj\x86\Debug\Image.xaml
+C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\obj\x86\Debug\Image.xbf
