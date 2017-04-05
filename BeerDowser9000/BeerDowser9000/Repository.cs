@@ -16,7 +16,11 @@ namespace BeerDowser9000
         private static List<ImageModel> imagesCache; 
 
         public static async Task<List<ImageModel>> GetImagesAsync(int id)
-        { 
+        {
+            //if (imagesCache != null)
+            //{
+            //    return imagesCache;
+            //}
             //string url = "http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/1659&s=json";
 
             string url = "http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/" + id + "&s=json";
@@ -31,20 +35,16 @@ namespace BeerDowser9000
         public static async Task<List<BeerModel>> GetAllBeersAsync(string filter, string filterFurther) 
         {
             string loc = "";
-            if (allBeersCache != null)
-            {
-                return allBeersCache;
-            }
 
-            if (filter == "State / Province")
+            if (filter == "State/Province" && filterFurther.Length > 0)
             {
                 loc = "locstate";
             }
-            else if (filter == "City")
+            else if (filter == "City" && filterFurther.Length > 0)
             {
                 loc = "loccity";
             }
-            else if (filter == "Location")
+            else if (filter == "Location" && filterFurther.Length > 0)
             {
                 loc = "locquery";
             }

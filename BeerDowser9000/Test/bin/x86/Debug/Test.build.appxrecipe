@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>49a898d8-ced5-4245-b779-acdc29775dd1</PackageIdentityName>
     <PackageIdentityPublisher>CN=Sean</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\bin\x86\Debug\Test.exe">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\bin\x86\Debug\Test.exe">
       <PackagePath>entrypoint\Test.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.exe">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.exe">
       <PackagePath>BeerDowser9000.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\TestPlatform.Universal\14.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll">
@@ -346,30 +346,6 @@
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\clretwrc.dll">
-      <PackagePath>clretwrc.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\coreclr.dll">
-      <PackagePath>coreclr.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\dbgshim.dll">
-      <PackagePath>dbgshim.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscordaccore.dll">
-      <PackagePath>mscordaccore.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscordbi.dll">
-      <PackagePath>mscordbi.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscorrc.debug.dll">
-      <PackagePath>mscorrc.debug.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\native\mscorrc.dll">
-      <PackagePath>mscorrc.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\runtime.win7-x86.Microsoft.NETCore.Runtime.CoreCLR\1.0.1\runtimes\win7-x86\lib\dotnet\mscorlib.ni.dll">
-      <PackagePath>mscorlib.ni.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\TestPlatform.Universal\14.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Common.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.Common.dll</PackagePath>
     </AppxPackagedFile>
@@ -391,64 +367,64 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\TestPlatform.Universal\14.0\Redist\CommonConfiguration\neutral\vstest_executionengine_platformbridge.winmd">
       <PackagePath>vstest_executionengine_platformbridge.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Properties\UnitTestApp.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Properties\UnitTestApp.rd.xml">
       <PackagePath>Properties\UnitTestApp.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\here4BeerLogo.png">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\here4BeerLogo.png">
       <PackagePath>Assets\here4BeerLogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\bin\x86\Debug\Test.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\bin\x86\Debug\Test.xr.xml">
       <PackagePath>Test.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\bin\x86\Debug\BeerDowser9000.xr.xml">
       <PackagePath>BeerDowser9000.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\beer2.wav">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer2.wav">
       <PackagePath>Assets\beer2.wav</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\beer3.jpg">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer3.jpg">
       <PackagePath>Assets\beer3.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\BeerDowser9000\Assets\beer4.jpg">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer4.jpg">
       <PackagePath>Assets\beer4.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\bd900repo\Here4Beer_BeerDowser9000\BeerDowser9000\Test\bin\x86\Debug\Core\Test.exe">
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\Test\bin\x86\Debug\Core\Test.exe">
       <PackagePath>Test.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

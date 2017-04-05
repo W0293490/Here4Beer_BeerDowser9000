@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,9 +26,9 @@ namespace BeerDowser9000
     public sealed partial class MainPage : Page
     {
 
-        Repository repo = new Repository();
         MainPageData mpd = new MainPageData();
-        public string LocationFilter;
+        Repository repo = new Repository();
+        //public string LocationFilter;
 
 
         public MainPage()
@@ -46,10 +47,10 @@ namespace BeerDowser9000
         }
 
 
-        private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        }
+        //}
 
         private void comboBoxSearchTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -57,20 +58,71 @@ namespace BeerDowser9000
 
         }
 
-        private void btnFindLocations_Click(object sender, RoutedEventArgs e)
+        public void btnFindLocations_Click(object sender, RoutedEventArgs e)
         {
-            //mpd.BeerPlaces = new ObservableCollection<BeerModel>();
-            mpd.LoadData(comboBoxSearchTypes.SelectedValue.ToString(), txtBoxSearchQuery.Text);
-            //MainPageData;
-            //PlaySound();
+            if(txtBoxSearchQuery.Text.Length == 0 || txtBoxSearchQuery.Text == "")
+            {
+            }
+             
+            else
+            {
+              try
+                { 
+                    mpd.LoadData(comboBoxSearchTypes.SelectedValue.ToString(), txtBoxSearchQuery.Text);
+                }
+                catch (Exception)
+                {
+
+                }
+                  DataContext = mpd;
+            }
         }
 
         private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
             PlaySound();
-            Frame.Navigate(typeof(About));
+            Frame.Navigate(typeof(About), mpd);
 
         }
-             
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            CoreApplication.Exit();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if(e.Parameter != ""){
+                mpd = (MainPageData)e.Parameter;
+                DataContext = mpd;
+            }
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ImageModel image = (ImageModel)listView.SelectedItem;
+            if(image != null)
+            {
+                Frame.Navigate(typeof(Image), mpd);
+            }
+        }
+
+        private void listViewLocations_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            BeerModel place = (BeerModel)listViewLocations.SelectedItem;
+            if (place != null && place.imagecount != "0")
+            {
+                textBlockNoImage.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                textBlockNoImage.Visibility = Visibility.Visible;
+            }
+        }
+
+        //private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        //{
+        //    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        //}
+
     }
 }

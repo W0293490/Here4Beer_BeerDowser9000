@@ -22,15 +22,21 @@ namespace BeerDowser9000
     /// </summary>
     public sealed partial class About : Page
     {
+        MainPageData mpd;
         public About()
         {
             this.InitializeComponent();
             myAnimation.Begin();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            mpd = (MainPageData)e.Parameter;
+        }
+
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(MainPage), mpd);
         }
     }
 }
