@@ -126,8 +126,7 @@ namespace BeerDowser9000
             PlaceImages = new ObservableCollection<ImageModel>();
         }
 
-
-        public async void LoadData(string loc, string filterFurther)
+        public async void LoadData(string loc, string filterFurther) // Catch exceptions for blank searches or null return searches
         {
            if(filterFurther.Length > 0)
             {
@@ -151,7 +150,6 @@ namespace BeerDowser9000
             }
         }
 
-
         public async void LoadImages(int id) 
         {
             if (_placeImages != null) // If list contains images, clear it (so it doesn't continue to append for next)
@@ -174,6 +172,5 @@ namespace BeerDowser9000
             }
             NoImage = "";
         }
-
     }
 }
