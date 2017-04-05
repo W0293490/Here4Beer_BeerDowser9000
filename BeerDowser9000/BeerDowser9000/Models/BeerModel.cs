@@ -24,15 +24,6 @@ namespace BeerDowser9000.Models
         public string url { get; set; }
         public string overall { get; set; }
         public string imagecount { get; set; }
-        //List<ImageModel> images { get; set; }
-
-        //[DataMember]
-        //public IEnumerable<ImageModel> images { get; set; }
-
-        //public BeerModel(string name)
-        //{
-        //    this.name = name;
-        //}
 
         public BeerModel() {}
 
@@ -43,9 +34,5 @@ namespace BeerDowser9000.Models
                     ", " + country + ".\n\nPhone: " + phone + "."
                     ; }
         }
-
-
-
-        //public string NamesAsString => string.Join(", ", name);
     }
 }
