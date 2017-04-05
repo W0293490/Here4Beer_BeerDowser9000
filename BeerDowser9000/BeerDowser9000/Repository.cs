@@ -9,20 +9,11 @@ namespace BeerDowser9000
 {
     public class Repository
     {
-        //MainPageData mpd = new MainPageData();
-
         private static List<BeerModel> allBeersCache;
- 
         private static List<ImageModel> imagesCache; 
 
         public static async Task<List<ImageModel>> GetImagesAsync(int id)
         {
-            //if (imagesCache != null)
-            //{
-            //    return imagesCache;
-            //}
-            //string url = "http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/1659&s=json";
-
             string url = "http://beermapping.com/webservice/locimage/45b31d04baa8c587b9b55036dd35bf44/" + id + "&s=json";
 
             var hc = new HttpClient();
@@ -48,7 +39,7 @@ namespace BeerDowser9000
             {
                 loc = "locquery";
             }
-
+            // Construct API call through form functions:
             string url = "http://beermapping.com/webservice/" + loc + "/45b31d04baa8c587b9b55036dd35bf44/" + filterFurther + "&s=json";
 
             var hc = new HttpClient();
@@ -58,7 +49,5 @@ namespace BeerDowser9000
             allBeersCache = (List<BeerModel>)serializer.ReadObject(stream);
             return allBeersCache;
         }
-
     }
-
 }
