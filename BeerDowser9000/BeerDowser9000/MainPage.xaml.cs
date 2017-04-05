@@ -24,11 +24,8 @@ namespace BeerDowser9000
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
         MainPageData mpd = new MainPageData();
         Repository repo = new Repository();
-        //public string LocationFilter;
-
 
         public MainPage()
         {
@@ -44,33 +41,22 @@ namespace BeerDowser9000
             element.SetSource(stream, "");
             element.Play();
         }
-
-
-        //private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-
-        //}
-
+        
         private void comboBoxSearchTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-
+          
         }
 
         public void btnFindLocations_Click(object sender, RoutedEventArgs e)
         {
-            //mpd.BeerPlaces = new ObservableCollection<BeerModel>();
             mpd.LoadData(comboBoxSearchTypes.SelectedValue.ToString(), txtBoxSearchQuery.Text);
             DataContext = mpd;
-            //MainPageData;
-            //PlaySound();
         }
 
         private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
             PlaySound();
             Frame.Navigate(typeof(About), mpd);
-
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -89,11 +75,5 @@ namespace BeerDowser9000
                 Frame.Navigate(typeof(Image), mpd);
             }
         }
-
-        //private void Image_Tapped(object sender, TappedRoutedEventArgs e)
-        //{
-        //    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        //}
-
     }
 }
