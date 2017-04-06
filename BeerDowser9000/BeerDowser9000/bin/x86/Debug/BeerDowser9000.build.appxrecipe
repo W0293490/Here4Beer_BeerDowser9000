@@ -334,14 +334,8 @@
     <AppxPackagedFile Include="C:\Users\Sean\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer2.wav">
-      <PackagePath>Assets\beer2.wav</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer3.jpg">
-      <PackagePath>Assets\beer3.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer4.jpg">
-      <PackagePath>Assets\beer4.jpg</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\bdLogoLarge.png">
+      <PackagePath>Assets\bdLogoLarge.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\here4BeerLogo.png">
       <PackagePath>Assets\here4BeerLogo.png</PackagePath>
@@ -372,6 +366,15 @@
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer2.wav">
+      <PackagePath>Assets\beer2.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer3.jpg">
+      <PackagePath>Assets\beer3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Assets\beer4.jpg">
+      <PackagePath>Assets\beer4.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Desktop\Here4Beer_BeerDowser9000-SeanBranch\BeerDowser9000\BeerDowser9000\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>

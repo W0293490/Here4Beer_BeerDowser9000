@@ -46,12 +46,6 @@ namespace BeerDowser9000
             element.Play();
         }
 
-
-        //private void listViewLocations_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-
-        //}
-
         private void comboBoxSearchTypes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
@@ -118,11 +112,7 @@ namespace BeerDowser9000
                 textBlockNoImage.Visibility = Visibility.Visible;
             }
         }
-
-        //private void Image_Tapped(object sender, TappedRoutedEventArgs e)
-        //{
-        //    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
-        //}
+        
 
     }
 }

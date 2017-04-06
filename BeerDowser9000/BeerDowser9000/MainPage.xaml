@@ -43,7 +43,7 @@
                         d:LayoutOverrides="LeftPosition, RightPosition">
                     <Image Height="220"
                            Stretch="Fill"
-                           Source="{Binding imageurl}" />
+                           Source="{Binding imageurl}" ToolTipService.ToolTip="{Binding caption}"/>
                 </Border>
             </Grid>
         </DataTemplate>

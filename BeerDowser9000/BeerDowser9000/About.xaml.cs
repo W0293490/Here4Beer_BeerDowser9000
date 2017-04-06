@@ -26,7 +26,6 @@ namespace BeerDowser9000
         public About()
         {
             this.InitializeComponent();
-            myAnimation.Begin();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
